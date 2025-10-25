@@ -10,6 +10,7 @@
   "properties": {
     "settings": {
       "type": "object",
+      "additionalProperties": true,
       "properties": {
         "cert": {
           "type": "string",
@@ -1171,6 +1172,14 @@
               "description": " If the timer is more than X ms late, it will warn to console AND mesherrors.txt"
             }
           }
+        }
+      },
+      "patternProperties": {
+        "^_.*": {
+          "type": "null",
+          "x-disabled": true,
+          "x-enabled-name": "Remove underscore prefix to enable",
+          "errorMessage": "⚠️ DISABLED SETTING - This setting is currently disabled. Remove the underscore (_) prefix to enable it."
         }
       }
     },
@@ -3901,6 +3910,14 @@
               "bottom"
             ]
           }
+        },
+        "patternProperties": {
+          "^_.*": {
+            "type": "null",
+            "x-disabled": true,
+            "x-enabled-name": "Remove underscore prefix to enable",
+            "errorMessage": "⚠️ DISABLED SETTING - This setting is currently disabled. Remove the underscore (_) prefix to enable it."
+          }
         }
       }
     },
@@ -4403,6 +4420,15 @@
           "description": "Enabled Zulip integration support."
         }
       }
+    }
+  },
+  "additionalProperties": true,
+  "patternProperties": {
+    "^_.*": {
+      "type": "null",
+      "x-disabled": true,
+      "x-enabled-name": "Remove underscore prefix to enable",
+      "errorMessage": "⚠️ DISABLED SECTION - This section is currently disabled. Remove the underscore (_) prefix to enable it."
     }
   }
 }
