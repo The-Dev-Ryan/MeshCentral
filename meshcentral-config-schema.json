@@ -4421,7 +4421,6 @@
       }
     }
   },
-  "additionalProperties": true,
   "patternProperties": {
     "^_.*": {
       "type": "null",
