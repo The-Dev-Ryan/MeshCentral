@@ -10,7 +10,6 @@
   "properties": {
     "settings": {
       "type": "object",
-      "additionalProperties": true,
       "properties": {
         "cert": {
           "type": "string",
