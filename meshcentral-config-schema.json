@@ -4426,7 +4426,7 @@
       "type": "null",
       "x-disabled": true,
       "x-enabled-name": "Remove underscore prefix to enable",
-      "errorMessage": "⚠️ DISABLED SECTION - This section is currently disabled. Remove the underscore (_) prefix to enable it."
+      "errorMessage": "⚠️ DISABLED SETTING - This setting is currently disabled. Remove the underscore (_) prefix to enable it."
     }
   }
 }
