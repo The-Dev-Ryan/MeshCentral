@@ -790,6 +790,7 @@ a {
 }
 
 .filelist {
+     user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -1556,6 +1557,7 @@ a {
     height: calc(100% - 102px);
     overflow: auto;
     -webkit-user-select: none;
+    user-select: none;
 }
 
 .toolbar-bottom {
@@ -2550,6 +2552,7 @@ a {
     height: calc(100% - 133px);
     overflow: auto;
     -webkit-user-select: none;
+    user-select: none;
 }
 
 #p13toolbarBottom {
