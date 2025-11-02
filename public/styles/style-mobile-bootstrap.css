@@ -1611,7 +1611,17 @@ a {
     pointer-events: auto;
 }
 
-/* Ensure clickable elements in p10deskTopTable are interactive */
+@media (max-width: 767px) {
+    body:has(#top-bar:not([style*="display: none"]):not([style*="display:none"])) #p10deskTopTable {
+        top: calc(32px + env(safe-area-inset-top, 0px)) !important;
+    }
+    @supports not selector(:has(*)) {
+        #p10deskTopTable {
+            top: calc(32px + env(safe-area-inset-top, 0px)) !important;
+        }
+    }
+}
+
 #p10deskTopTable td[onclick],
 #p10deskTopTable td {
     pointer-events: auto;
@@ -1796,7 +1806,7 @@ a {
     color: #5ac8fa;
 }
 
-/* Style Actions and Notes tab buttons to match desk-button-action */
+
 #p10html input[type="button"] {
     height: 28px;
     padding: 0 12px;
@@ -1833,7 +1843,6 @@ a {
     transform: translateY(0);
 }
 
-/* Active/selected tab style - first button or button with active class - NO BLUE */
 #p10html input[type="button"]:first-of-type,
 #p10html input[type="button"].active {
     color: #1d1d1f;
@@ -2123,7 +2132,6 @@ a {
     justify-content: flex-start;
 }
 
-/* Style all bottom buttons to match desk-button-action */
 #p10html3 .p10html3-buttons a {
     height: 28px;
     padding: 0 10px;
@@ -2175,7 +2183,6 @@ a {
     margin-left: auto;
 }
 
-/* Style p10html2 table header to match button background */
 #p10html2 table tr[style*="background-color:#AAAAAA"],
 #p10html2 table tr[style*="background-color: #AAAAAA"],
 #p10html2 table thead tr,
@@ -2192,7 +2199,6 @@ a {
     background-color: transparent !important;
 }
 
-/* Dark mode: target white table cells and backgrounds */
 .night #p10html2 table {
     background-color: #2a2a2a !important;
     border-color: #555 !important;
@@ -2482,7 +2488,17 @@ a {
     pointer-events: auto;
 }
 
-/* Ensure clickable elements in p10deskTopTable are interactive */
+@media (max-width: 767px) {
+    body:has(#top-bar:not([style*="display: none"]):not([style*="display:none"])) #p10deskTopTable {
+        top: calc(2px + env(safe-area-inset-top, 0px)) !important;
+    }
+    @supports not selector(:has(*)) {
+        #p10deskTopTable {
+            top: calc(2px + env(safe-area-inset-top, 0px)) !important;
+        }
+    }
+}
+
 #p10deskTopTable td[onclick],
 #p10deskTopTable td {
     pointer-events: auto;
