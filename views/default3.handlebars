@@ -18,7 +18,7 @@
     <link id="theme-stylesheet" href="styles/bootstrap{{{min}}}.css" rel="stylesheet" title="CSS">
     <link href="styles/select2.min.css" rel="stylesheet" title="CSS">
     <link href="styles/select2-bootstrap-5-theme.min.css" rel="stylesheet" title="CSS">
-    <link type="text/css" href="styles/custom.css" media="screen" rel="stylesheet" title="CSS" />
+    {{{customCSSTags}}}
     <link rel="apple-touch-icon" href="/favicon-303x303.png" />
     <script type="text/javascript" src="scripts/common-0.0.1{{{min}}}.js"></script>
     <script type="text/javascript" src="scripts/meshcentral{{{min}}}.js"></script>
@@ -59,7 +59,7 @@
     <script keeplink=1 type="text/javascript" src="scripts/ol3-contextmenu{{{min}}}.js"></script>
     <script keeplink=1 type="text/javascript" src="scripts/purify{{{min}}}.js"></script>
     <script keeplink=1 type="text/javascript" src="scripts/marked{{{min}}}.js"></script>
-    <script type="text/javascript" src="scripts/custom.js"></script>
+    {{{customJSTags}}}
     <title>{{{title}}}</title>
 </head>
 
@@ -145,8 +145,18 @@
             <div class="title" onclick="go(1,event)">{{{title1}}}</div>
             <div class="title2">{{{title2}}}</div>
             <div style="float:right">
-                <div id=notificationCount onclick="clickNotificationIcon()" class="unselectable" style="display: none;"
-                    title="Click to view current notifications">0</div>
+                <div id="notificationCount"
+                    class="position-relative"
+                    title="Click to view current notifications"
+                    onclick="clickNotificationIcon()"
+                    style="display: none;">
+                <i class="fa-solid fa-bell fa-lg text-white"></i>
+                <span id="notificationBadge"
+                        class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 0.65rem;">
+                    0
+                </span>
+                </div>
             </div>
             <p id="logoutControl"><span id=logoutControlSpan class="logoncontrolspan"></span><span id=idleTimeoutNotify
                     style="color:yellow"></span></p>
@@ -277,13 +287,6 @@
                                 <td tabindex=0 id=ServerPlugins class="topbar_td style3x" onmouseup=go(42,event)
                                     onkeypress="if (event.key == 'Enter') go(42)">Plugins</td>
                                 <td class="topbar_td_end style3">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id=UserDummyMenuSpan>
-                        <table id=UserDummyMenu cellpadding=0 cellspacing=0 class=style1>
-                            <tr>
-                                <td class=style3 style="">&nbsp;</td>
                             </tr>
                         </table>
                     </div>
@@ -2124,6 +2127,13 @@
                         userImageSrc = 'userimage.ashx?rnd=' + userinfo.accountImageRnd;
                     }
                     
+					// Check permissions
+					var siteRights = userinfo ? userinfo.siteadmin : 0;
+					var serverFeatures = parseInt('{{{serverfeatures}}}');
+					var canViewUsers = ((users != null) && ((features & 4) == 0)) || (((userinfo && userinfo.siteadmin & 512) != 0) && ((features & 0x08000000) != 0));
+					var canViewFiles = (siteRights & 8) != 0;
+					var canViewServer = (siteRights & 21) && ((serverFeatures & 64) != 0);
+					
 					logoutControl = '<div id="userDropdown">' +
 						'<div id="userDropdownButton">' +
 							'<img id="userDropdownImage" src="' + userImageSrc + '" />' +
@@ -2133,73 +2143,73 @@
 						'<div id="userDropdownMenu">' +
 							'<div id="userDropdownMenuContainer">' +
 					
-								'<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'devices\'); QV(\'userDropdownMenu\', false);">' +
+								'<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'devices\'); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 									'<i class="fa fa-desktop userDropdownMenuIcon"></i>' +
 									'<span>' + "My Devices" + '</span>' +
 								'</div>' +
 					
-								'<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'events\'); QV(\'userDropdownMenu\', false);">' +
+								'<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'events\'); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 									'<i class="fa fa-calendar userDropdownMenuIcon"></i>' +
 									'<span>' + "My Events" + '</span>' +
 								'</div>' +
 					
-								'<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'users\'); QV(\'userDropdownMenu\', false);">' +
+								(canViewUsers ? '<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'users\'); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 									'<i class="fa fa-users userDropdownMenuIcon"></i>' +
 									'<span>' + "My Users" + '</span>' +
-								'</div>' +
+								'</div>' : '') +
 					
-								'<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'files\'); QV(\'userDropdownMenu\', false);">' +
+								(canViewFiles ? '<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'files\'); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 									'<i class="fa fa-folder userDropdownMenuIcon"></i>' +
 									'<span>' + "My Files" + '</span>' +
-								'</div>' +
+								'</div>' : '') +
 					
-								'<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'server\'); QV(\'userDropdownMenu\', false);">' +
+								(canViewServer ? '<div class="userDropdownMenuItem userDropdownMobileOnly" onclick="goForward(\'server\'); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 									'<i class="fa fa-server userDropdownMenuIcon"></i>' +
 									'<span>' + "My Server" + '</span>' +
-								'</div>' +
+								'</div>' : '') +
 					
 								'<div id="userDropdownMenuDivider" class="userDropdownMobileOnly"></div>' +
 					
 								'<div class="userDropdownMenuItem userDropdownUISettings" onclick="toggleUISubmenu(event);">' +
 									'<i class="fa fa-sliders userDropdownMenuIcon"></i>' +
 									'<span>' + "UI Settings" + '</span>' +
-									'<i class="fa fa-chevron-right userDropdownMenuIcon" style="margin-left: auto; margin-right: 0;"></i>' +
+									'<i class="fa fa-chevron-right userDropdownMenuIcon" style="margin-left: auto; margin-right: 0; transition: transform 0.3s ease;"></i>' +
 								'</div>' +
 					
 								'<div id="uiSubmenu" class="userDropdownSubmenu" style="display:none;" onclick="event.stopPropagation();">' +
-									'<div class="userDropdownMenuItem" onclick="toggleBootstrapUIMode(); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); document.removeEventListener(\'click\', closeUISubmenu);">' +
+									'<div class="userDropdownMenuItem" onclick="toggleBootstrapUIMode(); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 										'<i class="fa fa-toggle-on userDropdownMenuIcon"></i>' +
 										'<span>' + "Toggle Modern UI" + '</span>' +
 									'</div>' +
-									'<div class="userDropdownMenuItem" onclick="userInterfaceSelectMenu(1); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); document.removeEventListener(\'click\', closeUISubmenu);">' +
+									'<div class="userDropdownMenuItem" onclick="userInterfaceSelectMenu(1); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 										'<i class="fa fa-window-maximize fa-rotate-270 userDropdownMenuIcon"></i>' +
-										'<span>' + "Left bar interface" + '</span>' +
+										'<span>' + "Left Bar Interface" + '</span>' +
 									'</div>' +
-									'<div class="userDropdownMenuItem" onclick="userInterfaceSelectMenu(2); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); document.removeEventListener(\'click\', closeUISubmenu);">' +
+									'<div class="userDropdownMenuItem" onclick="userInterfaceSelectMenu(2); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 										'<i class="fa fa-window-maximize userDropdownMenuIcon"></i>' +
-										'<span>' + "Top bar interface" + '</span>' +
+										'<span>' + "Top Bar Interface" + '</span>' +
 									'</div>' +
-									'<div class="userDropdownMenuItem" onclick="userInterfaceSelectMenu(3); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); document.removeEventListener(\'click\', closeUISubmenu);">' +
+									'<div class="userDropdownMenuItem" onclick="userInterfaceSelectMenu(3); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 										'<i class="fa fa-columns userDropdownMenuIcon"></i>' +
-										'<span>' + "Fixed width interface" + '</span>' +
+										'<span>' + "Fixed Width Interface" + '</span>' +
 									'</div>' +
-									'<div class="userDropdownMenuItem" onclick="toggleFooterBarMode(); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); document.removeEventListener(\'click\', closeUISubmenu);">' +
+									'<div class="userDropdownMenuItem" onclick="toggleFooterBarMode(); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 										'<i class="fa fa-window-minimize userDropdownMenuIcon"></i>' +
-										'<span>' + "Toggle footer bar" + '</span>' +
+										'<span>' + "Toggle Footer Bar" + '</span>' +
 									'</div>' +
 								'</div>' +
                                 
-								'<div class="userDropdownMenuItem" onclick="toggleNightMode(); QV(\'userDropdownMenu\', false);">' +
-									'<i class="fa fa-moon userDropdownMenuIcon"></i>' +
+								'<div class="userDropdownMenuItem" onclick="toggleNightMode(); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
+									'<i class="fa ' + (document.body.classList.contains('night') ? 'fa-sun' : 'fa-moon') + ' userDropdownMenuIcon"></i>' +
 									'<span>' + "Toggle night mode" + '</span>' +
 								'</div>' +
 
-								'<div class="userDropdownMenuItem" onclick="showNotes(false); QV(\'userDropdownMenu\', false);">' +
+								'<div class="userDropdownMenuItem" onclick="showNotes(false); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 									'<i class="fa fa-sticky-note userDropdownMenuIcon"></i>' +
 									'<span>' + "Personal Notes" + '</span>' +
 								'</div>' +
 					
-								'<div class="userDropdownMenuItem" onclick="go(2); QV(\'userDropdownMenu\', false);">' +
+								'<div class="userDropdownMenuItem" onclick="go(2); QV(\'userDropdownMenu\', false); QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu);">' +
 									'<i class="fa fa-user userDropdownMenuIcon"></i>' +
 									'<span>' + "My Account" + '</span>' +
 								'</div>' +
@@ -2207,7 +2217,7 @@
                                 '<div id="userDropdownMenuDivider"></div>';
 					
 					if (logoutControls.logoutUrl != null) {
-						logoutControl += '<div class="userDropdownMenuItem" onclick="window.location.href=\'' + logoutControls.logoutUrl + '\'">' +
+						logoutControl += '<div class="userDropdownMenuItem" onclick="QV(\'uiSubmenu\', false); resetChevronArrow(); document.removeEventListener(\'click\', closeUISubmenu); window.location.href=\'' + logoutControls.logoutUrl + '\'">' +
 							'<i class="fa fa-sign-out userDropdownMenuIcon"></i>' +
 								'<span>' + "Logout" + '</span>' +
 						'</div>';
@@ -2656,12 +2666,14 @@
                     userDropdownMenu.style.display = 'block';
                     QV('uiMenu', false);
                     QV('topMenu', false);
+                    updateNightModeIcon();
                 } else {
                     userDropdownMenu.style.display = 'none';
                     var uiSubmenu = Q('uiSubmenu');
                     if (uiSubmenu) {
                         uiSubmenu.style.display = 'none';
                     }
+                    resetChevronArrow();
                 }
             }
         }
@@ -2704,6 +2716,14 @@
                 var isVisible = (uiSubmenu.style.display == 'block');
                 uiSubmenu.style.display = isVisible ? 'none' : 'block';
                 
+                var chevronIcon = document.querySelector('.userDropdownMenuItem[onclick*="toggleUISubmenu"] .fa-chevron-right');
+                if (chevronIcon) {
+                    if (isVisible) {
+                        chevronIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        chevronIcon.style.transform = 'rotate(90deg)';
+                    }
+                }
                 if (!isVisible) {
                     setTimeout(function() {
                         document.addEventListener('click', closeUISubmenu);
@@ -2718,6 +2738,7 @@
             if (uiSubmenu && userDropdown) {
                 if (!uiSubmenu.contains(event.target) && !userDropdown.contains(event.target)) {
                     uiSubmenu.style.display = 'none';
+                    resetChevronArrow();
                     document.removeEventListener('click', closeUISubmenu);
                 }
             }
@@ -2792,7 +2813,6 @@
                 QC('body').remove('fullscreen');
                 QC('body').remove('arg_hide');
                 if (xxcurrentView >= 10) QC('column_l').add('room4submenu');
-                QV('UserDummyMenuSpan', false);
                 leftBar.classList.add('d-none');
                 //QV('page_leftbar', false);
             } else {
@@ -2801,7 +2821,6 @@
                 QV('page_leftbar', !(args.hide & 16));
                 QV('MainMenuSpan', !(args.hide & 16));
                 if (xxcurrentView >= 10) QC('column_l').remove('room4submenu');
-                QV('UserDummyMenuSpan', (xxcurrentView < 10) && webPageFullScreen);
                 leftBar.classList.remove('d-none');
             }
             mainUpdate(512);
@@ -3075,7 +3094,8 @@
                     files = null;
                 }
                 if (serverinfo.logoutonidlesessiontimeout) {
-                    window.location.href = 'logout';
+                    if (urlargs.key) { window.location.href = 'logout?key=' + urlargs.key; }
+					else { window.location.href = 'logout'; }
                 }
             } else {
                 var ds = Math.round((serverinfo.timeout - delta) / 1000);
@@ -4670,10 +4690,11 @@
                     var x = "Take note of this username and password, the password cannot be shown again." + '<br /><br />';
                     x += addHtmlValue("Name", EscapeHtml(message.name))
                     if (message.expire != 0) { x += addHtmlValue("Expire", EscapeHtml(printDateTime(new Date(message.expire)))); }
-                    x += addHtmlValue("Username", '<i class="fa-regular fa-copy" title="' + "Copy link to clipboard" + '" style="margin:9px;cursor:pointer;float:right" onclick=copyTextToClip2("' + encodeURIComponentEx(message.tokenUser) + '")></i><div class=selecttext style=width:230px;padding:5px;background-color:orange;border-radius:5px;font-size:15px>' + EscapeHtml(message.tokenUser) + '</div>');
-                    x += addHtmlValue("Password", '<i class="fa-regular fa-copy" title="' + "Copy link to clipboard" + '" style="margin:9px;cursor:pointer;float:right" onclick=copyTextToClip2("' + encodeURIComponentEx(message.tokenPass) + '")></i><div class=selecttext style=width:230px;padding:5px;background-color:orange;border-radius:5px;font-size:15px>' + EscapeHtml(message.tokenPass) + '</div>');
-                    setModalContent('xxAddAgent', "Create Login Token", x);
-                    showModal('xxAddAgentModal', 'idx_dlgOkButton');
+                    x += addHtmlValue("Username", '<i class="fa-regular fa-copy" title="' + "Copy link to clipboard" + '" style="margin:9px;cursor:pointer;float:right" onclick=copyTextToClip2("' + encodeURIComponentEx(message.tokenUser) + '")></i><div class=selecttext style=width:230px;padding:5px;border-radius:5px;font-size:15px>' + EscapeHtml(message.tokenUser) + '</div>');
+                    x += addHtmlValue("Password", '<i class="fa-regular fa-copy" title="' + "Copy link to clipboard" + '" style="margin:9px;cursor:pointer;float:right" onclick=copyTextToClip2("' + encodeURIComponentEx(message.tokenPass) + '")></i><div class=selecttext style=width:230px;padding:5px;border-radius:5px;font-size:15px>' + EscapeHtml(message.tokenPass) + '</div>');
+                    setModalContent('xxAddAgent', "Login Token Created", x);
+                    QV('idx_dlgOkButton', false);
+                    Q('idx_dlgCancelButton').innerHTML = "Close";
                     break;
                 }
                 case 'loginTokens': { // Reveiced the list of login tokens
@@ -14219,6 +14240,7 @@
 
         function account_createLoginTokenEx() {
             meshserver.send({ action: 'createLoginToken', name: Q('d2tokenName').value, expire: parseInt(Q('d2tokenExpire').value) });
+            return false;
         }
 
         function account_showAccountNotifySettings() {
@@ -14682,7 +14704,7 @@
             x += addHtmlValue("Name", EscapeHtml(token.name));
             x += addHtmlValue("Username", EscapeHtml(token.tokenUser));
             setModalContent('xxAddAgent', "Remove Login Token", x);
-            showModal('xxAddAgentModal', 'idx_dlgOkButton', () => function (b, tokenUser) { meshserver.send({ action: 'loginTokens', remove: [tokenUser] }); });
+            showModal('xxAddAgentModal', 'idx_dlgOkButton', function () { meshserver.send({ action: 'loginTokens', remove: [tokenUser] }); });
         }
 
         function gotoMesh(meshid) {
@@ -19480,12 +19502,50 @@
 
         // Set the notification count on the upper right of the screen
         function setNotificationCount(c) {
-            if (parseInt(Q('notificationCount').innerHTML) == c) return; // If the count did not change, exit now.
-            QH('notificationCount', c);
-            QS('notificationCount')['background-color'] = (c == 0) ? 'lightblue' : 'orange';
+            var badge = Q('notificationBadge');
+            if (parseInt(badge.innerHTML) === c) return;
+            badge.innerHTML = c;
             QV('notificationCount', c > 0);
         }
 
+        // Close notification box when clicking outside
+        function setupNotificationClickOutside() {
+            document.addEventListener('click', function(event) {
+                var notificationBox = Q('notifiyBox');
+                var notificationIcon = Q('notificationCount');
+                if (notificationBox && QS('notifiyBox')['display'] !== 'none') {
+                    if (!notificationBox.contains(event.target) && !notificationIcon.contains(event.target)) {
+                        QV('notifiyBox', false);
+                    }
+                }
+            });
+        }
+        setupNotificationClickOutside();
+
+        // Update night mode icon and text in dropdown menu
+        function updateNightModeIcon() {
+            var nightModeItem = document.querySelector('.userDropdownMenuItem[onclick*="toggleNightMode"]');
+            if (nightModeItem) {
+                var icon = nightModeItem.querySelector('.userDropdownMenuIcon');
+                var textSpan = nightModeItem.querySelector('span');
+                if (icon && textSpan) {
+                    var isNightMode = document.body.classList.contains('night');
+                    var iconClass = isNightMode ? 'fa-sun' : 'fa-moon';
+                    var text = isNightMode ? "Toggle Light Mode" : "Toggle Dark Mode";
+                    var newIcon = document.createElement('i');
+                    newIcon.className = 'fa ' + iconClass + ' userDropdownMenuIcon';
+                    icon.parentNode.replaceChild(newIcon, icon);
+                    textSpan.textContent = text;
+                }
+            }
+        }
+        function resetChevronArrow() {
+            var chevronIcon = document.querySelector('.userDropdownMenuItem[onclick*="toggleUISubmenu"] .fa-chevron-right');
+            if (chevronIcon) {
+                chevronIcon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
         // Refresh the notification box
         function drawNotifications() {
             var notifySettings = getstore('notifications', 0);
@@ -20362,7 +20422,6 @@
             if ((x == 0) && (webPageFullScreen)) { QC('body').add('arg_hide'); }
 
             QV('MainSubMenuSpan', (x >= 10) && (x < 20));
-            QV('UserDummyMenuSpan', (x == 51) || ((x < 10) && (x != 6) && webPageFullScreen));
             QV('MeshSubMenuSpan', (x >= 20) && (x < 30));
             QV('UserSubMenuSpan', (x >= 30) && (x < 40));
             QV('ServerSubMenuSpan', x == 6 || x == 115 || x == 40 || x == 41 || x == 42 || x == 43);
