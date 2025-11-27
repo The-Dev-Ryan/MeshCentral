@@ -150,10 +150,8 @@
             </div>
 
             <div class="masthead-right">
-                <div id="notificationCount"
-                    class="notification-icon position-relative"
-                    title="Click to view current notifications"
-                    onclick="clickNotificationIcon()"
+                <div id="notificationCount" class="notification-icon position-relative"
+                    title="Click to view current notifications" onclick="clickNotificationIcon()"
                     style="display: none;">
                     <i class="fa-solid fa-bell fa-xl text-white"></i>
                     <span id="notificationBadge"
@@ -169,82 +167,100 @@
                         </div>
                         <div id="userDropdownMenu">
                             <div id="userDropdownMenuContainer">
-                                <div class="userDropdownMenuItem userDropdownMobileOnly mobile-menu-item" data-action="devices" onclick="handleUserMenuItem('devices')">
+                                <div class="userDropdownMenuItem userDropdownMobileOnly mobile-menu-item"
+                                    data-action="devices" onclick="handleUserMenuItem('devices')">
                                     <i class="fa fa-desktop userDropdownMenuIcon"></i>
                                     <span>My Devices</span>
                                 </div>
 
-                                <div class="userDropdownMenuItem userDropdownMobileOnly mobile-menu-item" data-action="events" onclick="handleUserMenuItem('events')">
+                                <div class="userDropdownMenuItem userDropdownMobileOnly mobile-menu-item"
+                                    data-action="events" onclick="handleUserMenuItem('events')">
                                     <i class="fa fa-calendar userDropdownMenuIcon"></i>
                                     <span>My Events</span>
                                 </div>
 
-                                <div id="mobileUsersMenuItem" class="userDropdownMenuItem userDropdownMobileOnly users-menu-item mobile-menu-item d-none" data-action="users" onclick="handleUserMenuItem('users')">
+                                <div id="mobileUsersMenuItem"
+                                    class="userDropdownMenuItem userDropdownMobileOnly users-menu-item mobile-menu-item d-none"
+                                    data-action="users" onclick="handleUserMenuItem('users')">
                                     <i class="fa fa-users userDropdownMenuIcon"></i>
                                     <span>My Users</span>
                                 </div>
 
-                                <div id="mobileFilesMenuItem" class="userDropdownMenuItem userDropdownMobileOnly files-menu-item mobile-menu-item d-none" data-action="files" onclick="handleUserMenuItem('files')">
+                                <div id="mobileFilesMenuItem"
+                                    class="userDropdownMenuItem userDropdownMobileOnly files-menu-item mobile-menu-item d-none"
+                                    data-action="files" onclick="handleUserMenuItem('files')">
                                     <i class="fa fa-folder userDropdownMenuIcon"></i>
                                     <span>My Files</span>
                                 </div>
 
-                                <div id="mobileServerMenuItem" class="userDropdownMenuItem userDropdownMobileOnly server-menu-item mobile-menu-item d-none" data-action="server" onclick="handleUserMenuItem('server')">
+                                <div id="mobileServerMenuItem"
+                                    class="userDropdownMenuItem userDropdownMobileOnly server-menu-item mobile-menu-item d-none"
+                                    data-action="server" onclick="handleUserMenuItem('server')">
                                     <i class="fa fa-server userDropdownMenuIcon"></i>
                                     <span>My Server</span>
                                 </div>
 
                                 <div id="userDropdownMenuDivider" class="userDropdownMobileOnly mobile-menu-item"></div>
 
-                                <div class="userDropdownMenuItem userDropdownUISettings" onclick="toggleUISubmenu(); event.stopPropagation();">
+                                <div class="userDropdownMenuItem userDropdownUISettings"
+                                    onclick="toggleUISubmenu(); event.stopPropagation();">
                                     <i class="fa fa-sliders userDropdownMenuIcon"></i>
                                     <span>UI Settings</span>
                                     <i class="fa fa-chevron-right userDropdownMenuIcon submenu-arrow"></i>
                                 </div>
 
                                 <div id="uiSubmenu" class="userDropdownSubmenu">
-                                    <div id="toggleModernUIMenuItem" class="userDropdownMenuItem" data-action="toggle-modern-ui" onclick="handleUserMenuItem('toggle-modern-ui')">
+                                    <div id="toggleModernUIMenuItem" class="userDropdownMenuItem"
+                                        data-action="toggle-modern-ui" onclick="handleUserMenuItem('toggle-modern-ui')">
                                         <i class="fa fa-toggle-on userDropdownMenuIcon"></i>
                                         <span>Toggle Modern UI</span>
                                     </div>
-                                    <div class="userDropdownMenuItem" data-action="left-bar" onclick="handleUserMenuItem('left-bar')">
+                                    <div class="userDropdownMenuItem" data-action="left-bar"
+                                        onclick="handleUserMenuItem('left-bar')">
                                         <i class="fa fa-window-maximize fa-rotate-270 userDropdownMenuIcon"></i>
                                         <span>Left Bar Interface</span>
                                     </div>
-                                    <div class="userDropdownMenuItem" data-action="top-bar" onclick="handleUserMenuItem('top-bar')">
+                                    <div class="userDropdownMenuItem" data-action="top-bar"
+                                        onclick="handleUserMenuItem('top-bar')">
                                         <i class="fa fa-window-maximize userDropdownMenuIcon"></i>
                                         <span>Top Bar Interface</span>
                                     </div>
-                                    <div class="userDropdownMenuItem" data-action="fixed-width" onclick="handleUserMenuItem('fixed-width')">
+                                    <div class="userDropdownMenuItem" data-action="fixed-width"
+                                        onclick="handleUserMenuItem('fixed-width')">
                                         <i class="fa fa-columns userDropdownMenuIcon"></i>
                                         <span>Fixed Width Interface</span>
                                     </div>
-                                    <div id="toggleFooterMenuItem" class="userDropdownMenuItem" data-action="toggle-footer" onclick="handleUserMenuItem('toggle-footer')">
+                                    <div id="toggleFooterMenuItem" class="userDropdownMenuItem"
+                                        data-action="toggle-footer" onclick="handleUserMenuItem('toggle-footer')">
                                         <i class="fa fa-window-minimize userDropdownMenuIcon"></i>
                                         <span>Toggle Footer Bar</span>
                                     </div>
                                     <div id="userDropdownMenuDivider" class="userDropdownMobileOnly"></div>
                                 </div>
 
-                                <div id="toggleNightMenuItem" class="userDropdownMenuItem" data-action="toggle-night" onclick="toggleNightMode(); QV('userDropdownMenu', false); QV('uiSubmenu', false); resetChevronArrow();">
+                                <div id="toggleNightMenuItem" class="userDropdownMenuItem" data-action="toggle-night"
+                                    onclick="toggleNightMode(); QV('userDropdownMenu', false); QV('uiSubmenu', false); resetChevronArrow();">
                                     <i id="nightModeIcon" class="fa userDropdownMenuIcon night-mode-icon"></i>
                                     <span id="nightModeText">Toggle night mode</span>
                                 </div>
 
 
-                                <div class="userDropdownMenuItem" data-action="notes" onclick="handleUserMenuItem('notes')">
+                                <div class="userDropdownMenuItem" data-action="notes"
+                                    onclick="handleUserMenuItem('notes')">
                                     <i class="fa fa-sticky-note userDropdownMenuIcon"></i>
                                     <span>Personal Notes</span>
                                 </div>
 
-                                <div class="userDropdownMenuItem" data-action="account" onclick="handleUserMenuItem('account')">
+                                <div class="userDropdownMenuItem" data-action="account"
+                                    onclick="handleUserMenuItem('account')">
                                     <i class="fa fa-user userDropdownMenuIcon"></i>
                                     <span>My Account</span>
                                 </div>
 
                                 <div id="userDropdownMenuDivider"></div>
 
-                                <div class="userDropdownMenuItem" data-action="logout" onclick="handleUserMenuItem('logout')">
+                                <div class="userDropdownMenuItem" data-action="logout"
+                                    onclick="handleUserMenuItem('logout')">
                                     <i class="fa fa-sign-out userDropdownMenuIcon"></i>
                                     <span>Logout</span>
                                 </div>
@@ -258,12 +274,24 @@
         <div class="sidebar flex-column" id="page_leftbar">
             <div style="height:24px"></div>
             <nav class="nav flex-column">
-                <a class="nav-link active text-center text-white lbbuttonsel" id="LeftMenuMyDevices" href="#" data-target="general" onclick=go(1,event) onkeypress="if (event.key=='Enter') { go(1); }"><i class="fa-solid fa-computer me-2"></i></a>
-                <a class="nav-link text-center text-white" id="LeftMenuMyAccount" href="#" data-target="account" onclick=go(2,event) onkeypress="if (event.key=='Enter') { go(2); }"><i class="fa-solid fa-user-gear me-2"></i></a>
-                <a class="nav-link text-center text-white" id="LeftMenuMyEvents" href="#" data-target="events" onclick=go(3,event) onkeypress="if (event.key=='Enter') { go(3); }"><i class="fa-solid fa-calendar-alt me-2"></i></a>
-                <a class="nav-link text-center text-white" id="LeftMenuMyFiles" href="#" data-target="files" onclick=go(5,event) onkeypress="if (event.key=='Enter') { go(5); }"><i class="fa-solid fa-folder-open me-2"></i></a>
-                <a class="nav-link text-center text-white" id="LeftMenuMyUsers" href="#" data-target="users" onclick=go(4,event) onkeypress="if (event.key=='Enter') { go(4); }"><i class="fa-solid fa-users me-2"></i></a>
-                <a class="nav-link text-center text-white" id="LeftMenuMyServer" href="#" data-target="server" onclick=go(6,event) onkeypress="if (event.key=='Enter') { go(6); }"><i class="fa-solid fa-server me-2"></i></a>
+                <a class="nav-link active text-center text-white lbbuttonsel" id="LeftMenuMyDevices" href="#"
+                    data-target="general" onclick=go(1,event) onkeypress="if (event.key=='Enter') { go(1); }"><i
+                        class="fa-solid fa-computer me-2"></i></a>
+                <a class="nav-link text-center text-white" id="LeftMenuMyAccount" href="#" data-target="account"
+                    onclick=go(2,event) onkeypress="if (event.key=='Enter') { go(2); }"><i
+                        class="fa-solid fa-user-gear me-2"></i></a>
+                <a class="nav-link text-center text-white" id="LeftMenuMyEvents" href="#" data-target="events"
+                    onclick=go(3,event) onkeypress="if (event.key=='Enter') { go(3); }"><i
+                        class="fa-solid fa-calendar-alt me-2"></i></a>
+                <a class="nav-link text-center text-white" id="LeftMenuMyFiles" href="#" data-target="files"
+                    onclick=go(5,event) onkeypress="if (event.key=='Enter') { go(5); }"><i
+                        class="fa-solid fa-folder-open me-2"></i></a>
+                <a class="nav-link text-center text-white" id="LeftMenuMyUsers" href="#" data-target="users"
+                    onclick=go(4,event) onkeypress="if (event.key=='Enter') { go(4); }"><i
+                        class="fa-solid fa-users me-2"></i></a>
+                <a class="nav-link text-center text-white" id="LeftMenuMyServer" href="#" data-target="server"
+                    onclick=go(6,event) onkeypress="if (event.key=='Enter') { go(6); }"><i
+                        class="fa-solid fa-server me-2"></i></a>
             </nav>
         </div>
         <div id=topbar class=noselect>
@@ -395,7 +423,8 @@
                         <h1>My Devices</h1>
                     </div>
                     <div style="display:none" id="devListToolbarViewIcons">
-                        <div id=devViewPageState style="float:left;line-height:32px;height:32px;font-size:16px;display:none"></div>
+                        <div id=devViewPageState
+                            style="float:left;line-height:32px;height:32px;font-size:16px;display:none"></div>
                         <div tabindex=0 id=devViewPageButton1 class=viewSelector onclick=onDeviceViewPageChange(1)
                             onkeypress="if (event.key == 'Enter') { onDeviceViewPageChange(1); }"
                             title="Go to first page" style="display:none">
@@ -416,22 +445,30 @@
                             title="Go to last page" style="display:none;margin-right:12px">
                             <div class="viewSelector8"></div>
                         </div>
-                        <span role=button tabindex=0 id=devViewButton1 class="fa-layers fa-fw fa-xl" onclick=onDeviceViewChange(1) onkeypress="if (event.key == 'Enter') { onDeviceViewChange(1); }" title="Columns">
+                        <span role=button tabindex=0 id=devViewButton1 class="fa-layers fa-fw fa-xl"
+                            onclick=onDeviceViewChange(1)
+                            onkeypress="if (event.key == 'Enter') { onDeviceViewChange(1); }" title="Columns">
                             <i class="fa-solid fa-bars" data-fa-transform="shrink-8 right-4 up-2"></i>
                             <i class="fa-solid fa-bars" data-fa-transform="shrink-8 left-4 up-2"></i>
                             <i class="fa-solid fa-bars" data-fa-transform="shrink-8 right-4 down-3"></i>
                             <i class="fa-solid fa-bars" data-fa-transform="shrink-8 left-4 down-3"></i>
                         </span>
-                        <span role=button tabindex=0 id=devViewButton2 class="fa-layers fa-fw fa-xl" onclick=onDeviceViewChange(2) onkeypress="if (event.key == 'Enter') { onDeviceViewChange(2); }" title="List">
+                        <span role=button tabindex=0 id=devViewButton2 class="fa-layers fa-fw fa-xl"
+                            onclick=onDeviceViewChange(2)
+                            onkeypress="if (event.key == 'Enter') { onDeviceViewChange(2); }" title="List">
                             <i class="fa-solid fa-bars"></i>
                         </span>
-                        <span role=button tabindex=0 id=devViewButton3 class="fa-layers fa-fw fa-xl" onclick=onDeviceViewChange(3) onkeypress="if (event.key == 'Enter') { onDeviceViewChange(3); }" title="Desktops">
+                        <span role=button tabindex=0 id=devViewButton3 class="fa-layers fa-fw fa-xl"
+                            onclick=onDeviceViewChange(3)
+                            onkeypress="if (event.key == 'Enter') { onDeviceViewChange(3); }" title="Desktops">
                             <i class="fa-solid fa-square" data-fa-transform="shrink-9 up-4 left-4"></i>
                             <i class="fa-solid fa-square" data-fa-transform="shrink-9 up-4 right-4"></i>
                             <i class="fa-solid fa-square" data-fa-transform="shrink-9 down-4 left-4"></i>
                             <i class="fa-solid fa-square" data-fa-transform="shrink-9 down-4 right-4"></i>
                         </span>
-                        <span role=button tabindex=0 id=devViewButton5  class="fa-layers fa-fw fa-xl"  onclick=onDeviceViewChange(5) onkeypress="if (event.key == 'Enter') { onDeviceViewChange(5); }" title="Desktops">
+                        <span role=button tabindex=0 id=devViewButton5 class="fa-layers fa-fw fa-xl"
+                            onclick=onDeviceViewChange(5)
+                            onkeypress="if (event.key == 'Enter') { onDeviceViewChange(5); }" title="Desktops">
                             <i class="fa-solid fa-square" data-fa-transform="shrink-10 up-4 left-6"></i>
                             <i class="fa-solid fa-square" data-fa-transform="shrink-10 up-4 right-1"></i>
                             <i class="fa-solid fa-square" data-fa-transform="shrink-10 up-4 right-5"></i>
@@ -439,32 +476,46 @@
                             <i class="fa-solid fa-square" data-fa-transform="shrink-10 down-4 left-5"></i>
                             <i class="fa-solid fa-square" data-fa-transform="shrink-10 down-4 right-6"></i>
                         </span>
-                        <span role=button tabindex=0 id=devViewButton4 class="fa-layers fa-fw fa-xl" onclick=onDeviceViewChange(4) onkeypress="if (event.key == 'Enter') { onDeviceViewChange(4); }" title="Map" style="display:none">
+                        <span role=button tabindex=0 id=devViewButton4 class="fa-layers fa-fw fa-xl"
+                            onclick=onDeviceViewChange(4)
+                            onkeypress="if (event.key == 'Enter') { onDeviceViewChange(4); }" title="Map"
+                            style="display:none">
                             <i class="fa-solid fa-map-location-dot"></i>
                         </span>
                     </div>
                 </div>
                 <div id="devListToolbarSpan" class="noselect d-flex align-items-center p-1">
-                    <div id=devListToolbar class="d-flex align-items-center visually-hidden"></td>
-                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Collapse All" id="CollapseAllButton" onclick="cmexpandaction(2)">
+                    <div id=devListToolbar class="d-flex align-items-center visually-hidden">
+                        </td>
+                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Collapse All"
+                            id="CollapseAllButton" onclick="cmexpandaction(2)">
                             <i class="fa-solid fa-chevron-up" data-fa-transform="down-6"></i>
                             <i class="fa-solid fa-chevron-down" data-fa-transform="up-6"></i>
                         </span>
-                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Expand All" id="ExpandAllButton" onclick="cmexpandaction(1)">
+                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Expand All"
+                            id="ExpandAllButton" onclick="cmexpandaction(1)">
                             <i class="fa-solid fa-chevron-up" data-fa-transform="up-6"></i>
                             <i class="fa-solid fa-chevron-down" data-fa-transform="down-6"></i>
                         </span>
-                        <input type=button class="btn btn-secondary me-1 btn-sm" id=SelectAllButton onclick="selectallButtonFunction();" value="Select All" />
-                        <input type=button class="btn btn-primary me-1 btn-sm" id=GroupActionButton disabled="disabled" value="Group Action" onclick=groupActionFunction() />
-                        <input type=button class="btn btn-secondary me-1 btn-sm" id=ScrollToTopButton onclick="onDevicesScroll(true);" value="Scroll To Top" />
-                        <input type="text" id=SearchInput class="form-control-sm me-1 btn-sm" placeholder="Filter" onchange=onDeviceSearchChanged(event) onclick=onDeviceSearchChanged(event) onkeyup=onDeviceSearchChanged(event) onfocus=onSearchFocus(1) onblur=onSearchFocus(0) title="Filter: user:xxx or u:xxx ip:xxx group:xxx or g:xxx tag:xxx or t: xxx atag:xxx or a:xxx os:xxx amt:xxx desc:xxx wsc:ok wsc:noav wsc:noupdate wsc:nofirewall wsc:any connectivity:xxx c:xxx">
+                        <input type=button class="btn btn-secondary me-1 btn-sm" id=SelectAllButton
+                            onclick="selectallButtonFunction();" value="Select All" />
+                        <input type=button class="btn btn-primary me-1 btn-sm" id=GroupActionButton disabled="disabled"
+                            value="Group Action" onclick=groupActionFunction() />
+                        <input type=button class="btn btn-secondary me-1 btn-sm" id=ScrollToTopButton
+                            onclick="onDevicesScroll(true);" value="Scroll To Top" />
+                        <input type="text" id=SearchInput class="form-control-sm me-1 btn-sm" placeholder="Filter"
+                            onchange=onDeviceSearchChanged(event) onclick=onDeviceSearchChanged(event)
+                            onkeyup=onDeviceSearchChanged(event) onfocus=onSearchFocus(1) onblur=onSearchFocus(0)
+                            title="Filter: user:xxx or u:xxx ip:xxx group:xxx or g:xxx tag:xxx or t: xxx atag:xxx or a:xxx os:xxx amt:xxx desc:xxx wsc:ok wsc:noav wsc:noupdate wsc:nofirewall wsc:any connectivity:xxx c:xxx">
                         <span id=SearchInputClearButton style="display:none;position:relative">
-                            <span class="fa-layers fa-fw" role="button" onclick="clearDeviceSearch()" style="position:absolute;left:-25px;top:-15px">
+                            <span class="fa-layers fa-fw" role="button" onclick="clearDeviceSearch()"
+                                style="position:absolute;left:-25px;top:-15px">
                                 <i class="fa-solid fa-circle" style="color:var(--bs-secondary-bg)"></i>
-                                <i class="fa-solid fa-xmark"  style="color:var(--bs-body-color)"></i>
+                                <i class="fa-solid fa-xmark" style="color:var(--bs-body-color)"></i>
                             </span>
                         </span>
-                        <select class="form-select-sm me-1" id=DevFilterSelect onchange=onOnlineCheckBox(event) title="Device Filter">
+                        <select class="form-select-sm me-1" id=DevFilterSelect onchange=onOnlineCheckBox(event)
+                            title="Device Filter">
                             <option value=0 selected>All</option>
                             <option value=1>Online</option>
                             <option value=5>Offline</option>
@@ -475,36 +526,57 @@
                             <option value=7>Tagged</option>
                             <option value=8>Untagged</option>
                         </select>
-                        <div class="form-check" title="Show devices operating system name"><input class="form-check-input me-1" type=checkbox id=RealNameCheckBox onclick=onRealNameCheckBox() /><label class="form-check-label" for="RealNameCheckBox">OS Name</label></div>
-                        <label style="display:none"><input type=checkbox id=OnlineCheckBox class="form-check-input me-2" onclick=onOnlineCheckBox(event) /><span title="Only show devices that are online">Online</span></label>
+                        <div class="form-check" title="Show devices operating system name"><input
+                                class="form-check-input me-1" type=checkbox id=RealNameCheckBox
+                                onclick=onRealNameCheckBox() /><label class="form-check-label" for="RealNameCheckBox">OS
+                                Name</label></div>
+                        <label style="display:none"><input type=checkbox id=OnlineCheckBox class="form-check-input me-2"
+                                onclick=onOnlineCheckBox(event) /><span
+                                title="Only show devices that are online">Online</span></label>
                         <span id="devsCustomUIBar"></span>
                     </div>
                     <div id=kvmListToolbar class="d-flex align-items-center style14 visually-hidden">
-                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Collapse All" id="CollapseAllButton2" onclick="cmexpandaction(2)">
+                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Collapse All"
+                            id="CollapseAllButton2" onclick="cmexpandaction(2)">
                             <i class="fa-solid fa-chevron-up" data-fa-transform="down-6"></i>
                             <i class="fa-solid fa-chevron-down" data-fa-transform="up-6"></i>
                         </span>
-                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Expand All" id="ExpandAllButton2" onclick="cmexpandaction(1)">
+                        <span class="fa-layers fa-fw me-1" role="button" style="display:none" title="Expand All"
+                            id="ExpandAllButton2" onclick="cmexpandaction(1)">
                             <i class="fa-solid fa-chevron-up" data-fa-transform="up-6"></i>
                             <i class="fa-solid fa-chevron-down" data-fa-transform="down-6"></i>
                         </span>
-                        <input type="button" class="btn btn-success me-1 btn-sm" onclick="connectAllKvmFunction()" value="Connect All" />
-                        <input type="button" class="btn btn-danger me-1 btn-sm" onclick="disconnectAllKvmFunction()" value="Disconnect All" />
-                        <input type="button" class="btn btn-secondary me-1 btn-sm" onclick="onDevicesScroll(true);" value="Scroll To Top" />
-                        <div class="form-check me-1" title="Automatic connect"><input class="form-check-input me-1" type=checkbox id="autoConnectDesktopCheckbox" onclick="autoConnectDesktops(event)" /><label class="form-check-label" for="autoConnectDesktopCheckbox">Auto</label></div>
-                        <input type="button" class="btn btn-primary me-1 btn-sm" onclick="showMultiDesktopSettings()" value="Settings" />
-                        <input type="text" id=KvmSearchInput class="form-control-sm me-1" placeholder="Filter" onchange=onDeviceSearchChanged(event) onclick=onDeviceSearchChanged(event) onkeyup=onDeviceSearchChanged(event) onfocus=onSearchFocus(1) onblur=onSearchFocus(0) title="Filter: user:xxx or u:xxx ip:xxx group:xxx or g:xxx tag:xxx or t: xxx atag:xxx or a:xxx os:xxx amt:xxx desc:xxx wsc:ok wsc:noav wsc:noupdate wsc:nofirewall wsc:any connectivity:xxx c:xxx">
+                        <input type="button" class="btn btn-success me-1 btn-sm" onclick="connectAllKvmFunction()"
+                            value="Connect All" />
+                        <input type="button" class="btn btn-danger me-1 btn-sm" onclick="disconnectAllKvmFunction()"
+                            value="Disconnect All" />
+                        <input type="button" class="btn btn-secondary me-1 btn-sm" onclick="onDevicesScroll(true);"
+                            value="Scroll To Top" />
+                        <div class="form-check me-1" title="Automatic connect"><input class="form-check-input me-1"
+                                type=checkbox id="autoConnectDesktopCheckbox"
+                                onclick="autoConnectDesktops(event)" /><label class="form-check-label"
+                                for="autoConnectDesktopCheckbox">Auto</label></div>
+                        <input type="button" class="btn btn-primary me-1 btn-sm" onclick="showMultiDesktopSettings()"
+                            value="Settings" />
+                        <input type="text" id=KvmSearchInput class="form-control-sm me-1" placeholder="Filter"
+                            onchange=onDeviceSearchChanged(event) onclick=onDeviceSearchChanged(event)
+                            onkeyup=onDeviceSearchChanged(event) onfocus=onSearchFocus(1) onblur=onSearchFocus(0)
+                            title="Filter: user:xxx or u:xxx ip:xxx group:xxx or g:xxx tag:xxx or t: xxx atag:xxx or a:xxx os:xxx amt:xxx desc:xxx wsc:ok wsc:noav wsc:noupdate wsc:nofirewall wsc:any connectivity:xxx c:xxx">
                         <span id=KvmSearchInputClearButton style="display:none;position:relative">
-                            <span class="fa-layers fa-fw" role="button" onclick="clearDeviceSearch()" style="position:absolute;left:-25px;top:-15px">
+                            <span class="fa-layers fa-fw" role="button" onclick="clearDeviceSearch()"
+                                style="position:absolute;left:-25px;top:-15px">
                                 <i class="fa-solid fa-circle" style="color:var(--bs-secondary-bg)"></i>
-                                <i class="fa-solid fa-xmark"  style="color:var(--bs-body-color)"></i>
+                                <i class="fa-solid fa-xmark" style="color:var(--bs-body-color)"></i>
                             </span>
                         </span>
                     </div>
                     <div id=devMapToolbar class="d-flex align-items-center style14 visually-hidden">
-                        <input class="form-control-sm me-1" type=search id=mapSearchLocation placeholder="Search Location" onfocus=onMapSearchFocus(1) onblur=onMapSearchFocus(0) />
-                        <input class="btn btn-primary me-1 btn-sm" type=button value=Search title="Search for location" onclick=getSearchLocation() />
-                        <input class="btn btn-secondary me-1 btn-sm" type=button id=refreshmap title="Reset map view" value=Reset onclick=refreshMap(false,true) />
+                        <input class="form-control-sm me-1" type=search id=mapSearchLocation
+                            placeholder="Search Location" onfocus=onMapSearchFocus(1) onblur=onMapSearchFocus(0) />
+                        <input class="btn btn-primary me-1 btn-sm" type=button value=Search title="Search for location"
+                            onclick=getSearchLocation() />
+                        <input class="btn btn-secondary me-1 btn-sm" type=button id=refreshmap title="Reset map view"
+                            value=Reset onclick=refreshMap(false,true) />
                     </div>
                     <div class="d-flex align-items-center ms-auto">
                         <div style="display:none" id=devListToolbarView>
@@ -538,7 +610,8 @@
                             </select>
                             &nbsp;
                         </div>
-                        <i class="fa-solid fa-gear" role="button" id=devListToolbarSettings onclick="onDeviceViewSettings()"></i>
+                        <i class="fa-solid fa-gear" role="button" id=devListToolbarSettings
+                            onclick="onDeviceViewSettings()"></i>
                     </div>
                 </div>
                 <div id=NoMeshesPanel style="display:none">
@@ -548,7 +621,9 @@
                                 <img src="images/info.png" width="47" height="48" />
                             </td>
                             <td>
-                                <div id="getStarted1">To get started, <a href=# onclick="return account_createMesh()"><strong>click here to create a device group</strong></a>.</div>
+                                <div id="getStarted1">To get started, <a href=#
+                                        onclick="return account_createMesh()"><strong>click here to create a device
+                                            group</strong></a>.</div>
                                 <div id="getStarted2">No device groups.</div>
                             </td>
                         </tr>
@@ -573,8 +648,8 @@
                 </div>
                 <div id="p2info" style="overflow-y:auto">
                     <div id="p2AccountImageFrame">
-                        <img id="p2AccountImage" alt="" width="128" height="128"
-                            onclick="account_manageImage(0)" src="images/user-256.png" />
+                        <img id="p2AccountImage" alt="" width="128" height="128" onclick="account_manageImage(0)"
+                            src="images/user-256.png" />
                         <div><a href=# onclick="account_manageImage(0)">Change image</a></div>
                     </div>
                     <div id="p2AccountSecurity" style="display:none">
@@ -588,27 +663,32 @@
                             <div id="manageEmail2FA">
                                 <div class="p2AccountActions"><span
                                         id="authEmailSetupCheck"><strong>&#x2713;</strong></span></div><span><a href=#
-                                        onclick="return account_manageAuthEmail()">Manage email authentication</a><br /></span>
+                                        onclick="return account_manageAuthEmail()">Manage email
+                                        authentication</a><br /></span>
                             </div>
                             <div id="manageAuthApp">
                                 <div class="p2AccountActions"><span
                                         id="authAppSetupCheck"><strong>&#x2713;</strong></span></div><span><a href=#
-                                        onclick="return account_manageAuthApp()">Manage authenticator app</a><br /></span>
+                                        onclick="return account_manageAuthApp()">Manage authenticator
+                                        app</a><br /></span>
                             </div>
-                             <div id="manageDuoApp">
+                            <div id="manageDuoApp">
                                 <div class="p2AccountActions"><span
                                         id="authDuoSetupCheck"><strong>&#x2713;</strong></span></div><span><a href=#
-                                        onclick="return account_manageAuthDuo()">Manage Duo authentication</a><br /></span>
+                                        onclick="return account_manageAuthDuo()">Manage Duo
+                                        authentication</a><br /></span>
                             </div>
                             <div id="manageHardwareOtp">
                                 <div class="p2AccountActions"><span
                                         id="authKeySetupCheck"><strong>&#x2713;</strong></span></div><span><a href=#
-                                        onclick="return account_manageHardwareOtp(0)">Manage security keys</a><br /></span>
+                                        onclick="return account_manageHardwareOtp(0)">Manage security
+                                        keys</a><br /></span>
                             </div>
                             <div id="managePushAuthDev">
                                 <div class="p2AccountActions"><span
                                         id="authPushAuthDevCheck"><strong>&#x2713;</strong></span></div><span><a href=#
-                                        onclick="return account_managePushAuthDev()">Manage push authentication</a><br /></span>
+                                        onclick="return account_managePushAuthDev()">Manage push
+                                        authentication</a><br /></span>
                             </div>
                             <div id="manageMessaging1">
                                 <div class="p2AccountActions"><span
@@ -627,28 +707,41 @@
                     <div id="p2AccountActions">
                         <p><strong>Account actions</strong></p>
                         <p class="mL">
-                            <span id="managePhoneNumber2" style="display:none"><a href=# onclick="return account_managePhone()">Manage phone number</a><br /></span>
-                            <span id="manageMessaging2" style="display:none"><a href=# onclick="return account_manageMessaging()">Manage messaging</a><br /></span>
-                            <span id="verifyEmailId" style="display:none"><a href=# onclick="return account_showVerifyEmail()">Verify email</a><br /></span>
-                            <span id="accountEnableNotificationsSpan" style="display:none"><a href=# onclick="return account_enableNotifications()">Enable web notifications</a><br /></span>
-                            <a href=# onclick="return account_showLocalizationSettings()">Localization Settings</a><br />
-                            <a href=# onclick="return account_showAccountNotifySettings()">Notification Settings</a><br />
+                            <span id="managePhoneNumber2" style="display:none"><a href=#
+                                    onclick="return account_managePhone()">Manage phone number</a><br /></span>
+                            <span id="manageMessaging2" style="display:none"><a href=#
+                                    onclick="return account_manageMessaging()">Manage messaging</a><br /></span>
+                            <span id="verifyEmailId" style="display:none"><a href=#
+                                    onclick="return account_showVerifyEmail()">Verify email</a><br /></span>
+                            <span id="accountEnableNotificationsSpan" style="display:none"><a href=#
+                                    onclick="return account_enableNotifications()">Enable web
+                                    notifications</a><br /></span>
+                            <a href=# onclick="return account_showLocalizationSettings()">Localization
+                                Settings</a><br />
+                            <a href=# onclick="return account_showAccountNotifySettings()">Notification
+                                Settings</a><br />
                             <span id="p2AccountPassActions">
-                                <span id="accountChangeEmailAddressSpan" style="display:none"><a href=# onclick="return account_showChangeEmail()">Change email address</a><br /></span>
-                                <a href=# onclick="return account_showChangePassword()">Change password</a><span id="p2nextPasswordUpdateTime"></span><br />
+                                <span id="accountChangeEmailAddressSpan" style="display:none"><a href=#
+                                        onclick="return account_showChangeEmail()">Change email address</a><br /></span>
+                                <a href=# onclick="return account_showChangePassword()">Change password</a><span
+                                    id="p2nextPasswordUpdateTime"></span><br />
                                 <a href=# onclick="return account_showDeleteAccount()">Delete account</a><br />
                             </span>
-                            <span id="accountCreateLoginTokenSpan" style="display:none"><a href=# onclick="return account_createLoginToken()">Create login token</a><br /></span>
+                            <span id="accountCreateLoginTokenSpan" style="display:none"><a href=#
+                                    onclick="return account_createLoginToken()">Create login token</a><br /></span>
                             <a href=# onclick="return account_showThemesSwitcher()">Switch theme</a><br />
                         </p>
                         <br style=clear:both />
                     </div>
                     <div id=p2logintokens></div>
                     <strong>Device Groups</strong>
-                    <span id="p2createMeshLink1"> - <button class="btn btn-primary btn-sm" onclick="return account_createMesh()"><i class="fa-fw fa-solid fa-circle-plus"></i> New</button></span>
+                    <span id="p2createMeshLink1"> - <button class="btn btn-primary btn-sm"
+                            onclick="return account_createMesh()"><i class="fa-fw fa-solid fa-circle-plus"></i>
+                            New</button></span>
                     <br /><br />
                     <div id=p2meshes></div>
-                    <div id=p2noMeshFound style="display:none">No device groups.<span id="p2createMeshLink2"> <a href=# onclick="return account_createMesh()"><strong>Get started here!</strong></a></span>
+                    <div id=p2noMeshFound style="display:none">No device groups.<span id="p2createMeshLink2"> <a href=#
+                                onclick="return account_createMesh()"><strong>Get started here!</strong></a></span>
                     </div>
                     <br style=clear:both />
                 </div>
@@ -681,7 +774,8 @@
                                     <option notransval=1 value=1000>Last 1000</option>
                                     <option notransval=1 value="">No limit</option>
                                 </select>
-                                <a href=# onclick=p3showDownloadEventsDialog(2)><i class="fa-solid fa-download" title="Download Events"></i></a>
+                                <a href=# onclick=p3showDownloadEventsDialog(2)><i class="fa-solid fa-download"
+                                        title="Download Events"></i></a>
                             </div>
                         </td>
                     </tr>
@@ -695,19 +789,30 @@
                 <table class="pTable">
                     <tr>
                         <td class="style14 d-flex align-items-center flex-wrap p-1">
-                            <div  class="d-flex align-items-center">
-                                <input type=button id=UsersSelectAllButton class="btn btn-secondary btn-sm me-1" onclick="p3usersSelectallButtonFunction()" value="Select All" />
-                                <input type=button id=UsersGroupActionButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Group Action" onclick=p3usersGroupActionFunction() />
-                                <input id=UserNewAccountButton class="btn btn-success btn-sm me-1" type=button onclick=showCreateNewAccountDialog() value="New Account..." />
+                            <div class="d-flex align-items-center">
+                                <input type=button id=UsersSelectAllButton class="btn btn-secondary btn-sm me-1"
+                                    onclick="p3usersSelectallButtonFunction()" value="Select All" />
+                                <input type=button id=UsersGroupActionButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Group Action" onclick=p3usersGroupActionFunction() />
+                                <input id=UserNewAccountButton class="btn btn-success btn-sm me-1" type=button
+                                    onclick=showCreateNewAccountDialog() value="New Account..." />
                                 <div class="d-inline-flex align-items-center">
-                                    <input id=UserSearchInput type=search class="form-control-sm me-1" placeholder=Filter onchange=onUserSearchInputChanged() onkeyup=onUserSearchInputChanged() autocomplete=off onfocus=onUserSearchFocus(1) onblur=onUserSearchFocus(0) />
+                                    <input id=UserSearchInput type=search class="form-control-sm me-1"
+                                        placeholder=Filter onchange=onUserSearchInputChanged()
+                                        onkeyup=onUserSearchInputChanged() autocomplete=off onfocus=onUserSearchFocus(1)
+                                        onblur=onUserSearchFocus(0) />
                                 </div>
                             </div>
                             <div class="d-flex align-items-center ms-auto">
-                                <input type=button class="btn btn-primary btn-sm me-2"onclick=showUserBroadcastDialog() style=margin-right:6px value="Broadcast" />
-                                <a href=# onclick=p4downloadUserInfo()><i role=button class="fa-solid fa-download me-2" title="Download user information"></i></a>
-                                <a href=# onclick=p4batchAccountCreate()><i role=button id=p4UserBatchCreate style="display:none" title="Batch create many user accounts" class="fa-solid fa-upload me-1"></i></a>
-                                <i style="cursor:pointer;margin-top:3px;margin-left:6px" id=usersListToolbarSettings class="fa-solid fa-cog" title="Settings" onclick="onUsersViewSettings()"></i>
+                                <input type=button class="btn btn-primary btn-sm me-2" onclick=showUserBroadcastDialog()
+                                    style=margin-right:6px value="Broadcast" />
+                                <a href=# onclick=p4downloadUserInfo()><i role=button class="fa-solid fa-download me-2"
+                                        title="Download user information"></i></a>
+                                <a href=# onclick=p4batchAccountCreate()><i role=button id=p4UserBatchCreate
+                                        style="display:none" title="Batch create many user accounts"
+                                        class="fa-solid fa-upload me-1"></i></a>
+                                <i style="cursor:pointer;margin-top:3px;margin-left:6px" id=usersListToolbarSettings
+                                    class="fa-solid fa-cog" title="Settings" onclick="onUsersViewSettings()"></i>
                             </div>
                         </td>
                     </tr>
@@ -723,17 +828,28 @@
                         <td id="p5filehead" valign=bottom class="d-flex align-items-center">
                             <div id="p5rightOfButtons" class="d-flex align-items-center"></div>
                             <div class="m-1 d-flex align-items-center">
-                                <input type=button id=p5FolderUp class="btn btn-secondary btn-sm me-1" disabled="disabled" onclick="return p5folderup();" value="Up" />
-                                <input type=button id=p5SelectAllButton class="btn btn-secondary btn-sm me-1" disabled="disabled" onclick="p5selectallfile();" value="Select All" />
-                                <input type=button id=p5RenameFileButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Rename" onclick="p5renamefile();" />
-                                <input type=button id=p5DeleteFileButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Delete" onclick="p5deletefile();" />
-                                <input type=button id=p5ViewFileButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Edit" onclick="p5viewfile()" />
-                                <input type=button id=p5NewFolderButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="New Folder" onclick="p5createfolder();" />
-                                <input type=button id=p5UploadButton class="btn btn-primary btn-sm me-1"  disabled="disabled" value="Upload" onclick="p5uploadFile()" />
-                                <input type=button id=p5DownloadButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Download" onclick="p5downloadButton()" />
-                                <input type=button id=p5CutButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Cut" onclick="p5copyFile(1)" />
-                                <input type=button id=p5CopyButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Copy" onclick="p5copyFile(0)" />
-                                <input type=button id=p5PasteButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Paste" onclick="p5pasteFile()" />
+                                <input type=button id=p5FolderUp class="btn btn-secondary btn-sm me-1"
+                                    disabled="disabled" onclick="return p5folderup();" value="Up" />
+                                <input type=button id=p5SelectAllButton class="btn btn-secondary btn-sm me-1"
+                                    disabled="disabled" onclick="p5selectallfile();" value="Select All" />
+                                <input type=button id=p5RenameFileButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Rename" onclick="p5renamefile();" />
+                                <input type=button id=p5DeleteFileButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Delete" onclick="p5deletefile();" />
+                                <input type=button id=p5ViewFileButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Edit" onclick="p5viewfile()" />
+                                <input type=button id=p5NewFolderButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="New Folder" onclick="p5createfolder();" />
+                                <input type=button id=p5UploadButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Upload" onclick="p5uploadFile()" />
+                                <input type=button id=p5DownloadButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Download" onclick="p5downloadButton()" />
+                                <input type=button id=p5CutButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Cut" onclick="p5copyFile(1)" />
+                                <input type=button id=p5CopyButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Copy" onclick="p5copyFile(0)" />
+                                <input type=button id=p5PasteButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Paste" onclick="p5pasteFile()" />
                         </td>
                     </tr>
                     <tr>
@@ -785,7 +901,8 @@
                             <div id="p2ServerActionsBackup">
                                 <div class="p2AccountActions"><span
                                         style="display:none"><strong>&#x2713;</strong></span></div><a id="p6backuplink"
-                                    href="{{{domainurl}}}backup.zip" rel="noreferrer noopener" target="_blank">Download server backup</a>
+                                    href="{{{domainurl}}}backup.zip" rel="noreferrer noopener" target="_blank">Download
+                                    server backup</a>
                             </div>
                             <div id="p2ServerActionsRestore">
                                 <div class="p2AccountActions"><span
@@ -795,7 +912,8 @@
                             <div id="p2ServerActionsGoogleBackup" style="display:none">
                                 <div class="p2AccountActions"><span id="p2ServerActionsGoogleBackupCheck"
                                         style="display:none"><strong>&#x2713;</strong></span></div><span><a href=#
-                                        onclick="return server_setupGoogleDriveBackup()">Google Drive backup</a><br /></span>
+                                        onclick="return server_setupGoogleDriveBackup()">Google Drive
+                                        backup</a><br /></span>
                             </div>
                             <div id="p2ServerActionsVersion">
                                 <div class="p2AccountActions"><span
@@ -839,7 +957,8 @@
             <div id=p10 style="display:none">
                 <div id=p10title class="d-flex align-items-center">
                     <div id="p10BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>General - <span id=p10deviceName></span></div>
                 </div>
@@ -858,7 +977,10 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><div id=notesPanelArea style=width:300px;height:200px;resize:none;overflow-y:scroll></div></td>
+                                            <td>
+                                                <div id=notesPanelArea
+                                                    style=width:300px;height:200px;resize:none;overflow-y:scroll></div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -866,10 +988,18 @@
                             <td style=width:20px></td>
                             <td style=width:200px;vertical-align:top;position:relative valign=top>
                                 <div class="deviceNotifyLargeDot">
-                                    <div id="p10deviceMsg" onclick=showDeviceMessages(null,null,event) class=deviceNotifyDotSub></div>
-                                    <i title="Starred" role=button class="fa-solid fa-star" id="p10deviceStar" onclick=showDeviceSessions(null,null,event) data-fa-transform="shrink-5" data-fa-mask="fa-solid fa-circle"></i>
-                                    <i title="List of remote sessions active on this computer." role=button class="fa-solid fa-arrow-right-arrow-left" id="p10deviceNotify" onclick=showDeviceSessions(null,null,event) data-fa-transform="shrink-5" data-fa-mask="fa-solid fa-circle"></i>
-                                    <i title="Help Requested" role=button class="fa-solid fa-question" id="p10deviceHelp" onclick=showDeviceHelpRequests(null,null,event) data-fa-transform="shrink-5" data-fa-mask="fa-solid fa-circle"></i>
+                                    <div id="p10deviceMsg" onclick=showDeviceMessages(null,null,event)
+                                        class=deviceNotifyDotSub></div>
+                                    <i title="Starred" role=button class="fa-solid fa-star" id="p10deviceStar"
+                                        onclick=showDeviceSessions(null,null,event) data-fa-transform="shrink-5"
+                                        data-fa-mask="fa-solid fa-circle"></i>
+                                    <i title="List of remote sessions active on this computer." role=button
+                                        class="fa-solid fa-arrow-right-arrow-left" id="p10deviceNotify"
+                                        onclick=showDeviceSessions(null,null,event) data-fa-transform="shrink-5"
+                                        data-fa-mask="fa-solid fa-circle"></i>
+                                    <i title="Help Requested" role=button class="fa-solid fa-question"
+                                        id="p10deviceHelp" onclick=showDeviceHelpRequests(null,null,event)
+                                        data-fa-transform="shrink-5" data-fa-mask="fa-solid fa-circle"></i>
                                 </div>
                                 <div id="p10deviceBattery" class="deviceBatteryLarge deviceBatteryLarge1"></div>
                                 <a href=# onclick=p10showiconselector()><img id=MainComputerImage></a>
@@ -886,16 +1016,19 @@
             <div id=p11 class="noselect" style="display:none">
                 <div id="p11title" class="d-flex align-items-center">
                     <div id="p11BackButton" class="pe-2">
-                        <i class="fa-solid fa-2xl fa-square-caret-left" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-2xl fa-square-caret-left" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Desktop - <span id=p11deviceName></span></div>
                     <div id="devListToolbarViewIcons" class="ms-auto">
-                        <i class="fa-solid fa-xl fa-maximize fa-border" role="button" onclick=deskToggleFull(event) title="Full Screen. Hold shift to browser full screen."></i>
+                        <i class="fa-solid fa-xl fa-maximize fa-border" role="button" onclick=deskToggleFull(event)
+                            title="Full Screen. Hold shift to browser full screen."></i>
                     </div>
                 </div>
                 <div id="p11warning" onclick="showFeaturesDlg()">
                     <div class="icon2"></div>
-                    <div class="warningbox">Redirection port or KVM feature is disabled<span id="p11warninga">, click here to enable it.</span></div>
+                    <div class="warningbox">Redirection port or KVM feature is disabled<span id="p11warninga">, click
+                            here to enable it.</span></div>
                 </div>
                 <div id="p11warning2" onclick="showPowerActionDlg()">
                     <div class="icon2"></div>
@@ -903,9 +1036,15 @@
                     </div>
                 </div>
                 <div style="position:absolute;right:16px;margin-top:-14px;font-size:x-small;color:black">
-                    <div id="p11capslock" style="display:inline-block;margin-left:1px;border-radius:5px;background-color:#A3FFB8;padding:2px">CAPS</div>
-                    <div id="p11scrolllock" style="display:inline-block;margin-left:1px;border-radius:5px;background-color:#A3FFB8;padding:2px">SCROLL</div>
-                    <div id="p11numlock" style="display:inline-block;margin-left:1px;border-radius:5px;background-color:#A3FFB8;padding:2px">NUM</div>
+                    <div id="p11capslock"
+                        style="display:inline-block;margin-left:1px;border-radius:5px;background-color:#A3FFB8;padding:2px">
+                        CAPS</div>
+                    <div id="p11scrolllock"
+                        style="display:inline-block;margin-left:1px;border-radius:5px;background-color:#A3FFB8;padding:2px">
+                        SCROLL</div>
+                    <div id="p11numlock"
+                        style="display:inline-block;margin-left:1px;border-radius:5px;background-color:#A3FFB8;padding:2px">
+                        NUM</div>
                 </div>
                 <div id=deskarea0 cellpadding=0 cellspacing=0>
                     <div id=deskarea1 class="areaHead d-flex flex-wrap">
@@ -914,21 +1053,33 @@
                                 value="AutoConnect" onclick=autoConnectDesktop(event) onkeypress="return false"
                                 onkeydown="return false" style="display:none;margin-right:4px" />
                             <div class="btn-group dropdown-center me-1" id=connectbutton1span>
-                                <button type="button" class="btn btn-success btn-sm" id=connectbutton1 title="Connect using MeshAgent remote desktop" onclick=connectDesktop(event,3) onkeypress="return false" onkeydown="return false" disabled="disabled">Connect</button>
-                                <button type="button" class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split" id=connectbutton1d data-bs-toggle="dropdown" aria-expanded="false">
+                                <button type="button" class="btn btn-success btn-sm" id=connectbutton1
+                                    title="Connect using MeshAgent remote desktop" onclick=connectDesktop(event,3)
+                                    onkeypress="return false" onkeydown="return false"
+                                    disabled="disabled">Connect</button>
+                                <button type="button"
+                                    class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split"
+                                    id=connectbutton1d data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="visually-hidden">Toggle Dropdown</span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" onclick="cmdeskaction(1,event)">Ask Consent + Bar</a></li>
+                                    <li><a class="dropdown-item" onclick="cmdeskaction(1,event)">Ask Consent + Bar</a>
+                                    </li>
                                     <li><a class="dropdown-item" onclick="cmdeskaction(2,event)">Ask Consent</a></li>
                                     <li><a class="dropdown-item" onclick="cmdeskaction(3,event)">Privacy Bar</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group dropdown-center me-1" id=connectbutton1rspan>
-                                <button type="button" class="btn btn-success btn-sm" id=connectbutton1r title="Connect using RDP" onclick=askRdpCredentials() onkeypress="return false" onkeydown="return false" disabled="disabled">RDP Connect</button>
-                                <button type="button" class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split" id=connectbutton1rd data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                                <button type="button" class="btn btn-success btn-sm" id=connectbutton1r
+                                    title="Connect using RDP" onclick=askRdpCredentials() onkeypress="return false"
+                                    onkeydown="return false" disabled="disabled">RDP Connect</button>
+                                <button type="button"
+                                    class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split"
+                                    id=connectbutton1rd data-bs-toggle="dropdown" aria-expanded="false"><span
+                                        class="visually-hidden">Toggle Dropdown</span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" onclick="cmaltportaction(1,event)">Alternate Port</a></li>
+                                    <li><a class="dropdown-item" onclick="cmaltportaction(1,event)">Alternate Port</a>
+                                    </li>
                                 </ul>
                             </div>
                             <span id=connectbutton1hspan><button class="btn btn-primary btn-sm me-1" type=button
@@ -936,29 +1087,51 @@
                                     onclick=connectDesktop(event,2) onkeypress="return false" onkeydown="return false"
                                     disabled="disabled">HW Connect</button></span>
                             <div class="btn-group dropdown-center me-1" id=disconnectbutton1span>
-                                <button type="button" class="btn btn-danger btn-sm" id=disconnectbutton1 title="Connect using MeshAgent remote desktop" onclick=connectDesktop(event,0) onkeypress="return false" onkeydown="return false">Disconnect</button>
-                                <button type="button" class="btn btn-danger btn-sm dropdown-toggle dropdown-toggle-split" id=diconnectbutton1d data-bs-toggle="dropdown" aria-expanded="false">
+                                <button type="button" class="btn btn-danger btn-sm" id=disconnectbutton1
+                                    title="Connect using MeshAgent remote desktop" onclick=connectDesktop(event,0)
+                                    onkeypress="return false" onkeydown="return false">Disconnect</button>
+                                <button type="button"
+                                    class="btn btn-danger btn-sm dropdown-toggle dropdown-toggle-split"
+                                    id=diconnectbutton1d data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="visually-hidden">Toggle Dropdown</span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" onclick="cmdeskaction(10,event)">Disconnect and Lock</a></li>
+                                    <li><a class="dropdown-item" onclick="cmdeskaction(10,event)">Disconnect and
+                                            Lock</a></li>
                                     <li><a class="dropdown-item" onclick="cmdeskaction(11,event)">Disconnect</a></li>
                                 </ul>
                             </div>
-                            <span id="deskstatus" style="line-height:22px">Disconnected</span><span id="deskmetadata"></span>
+                            <span id="deskstatus" style="line-height:22px">Disconnected</span><span
+                                id="deskmetadata"></span>
                         </div>
                         <div class="d-flex align-items-center ms-auto">
                             <div id="desktopCustomUiButtons" style="float:left"></div>
                             <div id="desktopCustomUpperRight" style="float:left;margin-right:6px"></div>
-                            <input type="button" class="btn btn-primary btn-sm" title="Change the power state of the remote machine" onkeypress="return false" onkeydown="return false" value="Power Actions..." onclick="showPowerActionDlg()" style="display:none" />
-                            <input id="deskActionsBtn" type=button class="btn btn-primary btn-sm me-1" title="Perform power actions on the device" onkeypress="return false" onkeydown="return false" value=Actions onclick=deviceActionFunction() class="mR" />
-                            <input id="deskActionsSettings" type="button" class="btn btn-primary btn-sm me-1" value="Settings" title="Edit remote desktop settings" onkeypress="return false" onkeydown="return false" onclick="showDesktopSettings()" class="mR" />
-                            <input id="deskFocusBtn" type="button" title="Toggle focus mode, when active only the region around the mouse is updated" onkeypress="return false" onkeydown="return false" value="Focus All" onclick="deskToggleFocus()" style="margin-right:3px;display:none" />
-                            <div id="deskRecordIcon" class='deskareaicon' title="Server is recording this session" style="display:none;background-color:red;width:12px;height:12px;border-radius:6px;margin-top:5px"></div>
-                            <div class='deskareaicon' title="Rotate Right" onclick="drotate(1)"><i class="fa-solid fa-rotate-right"></i></div>
-                            <div class='deskareaicon' title="Rotate Left" onclick="drotate(-1)"><i class="fa-solid fa-rotate-left"></i></div>
-                            <div class='deskareaicon' title="Toggle View Mode" onclick="toggleAspectRatio(1)">&#8690;</div>
-                            <div id="idx_deskFullBtn2" onclick=deskToggleFull(event) style="float:right">&nbsp;&#x2716;</div>
+                            <input type="button" class="btn btn-primary btn-sm"
+                                title="Change the power state of the remote machine" onkeypress="return false"
+                                onkeydown="return false" value="Power Actions..." onclick="showPowerActionDlg()"
+                                style="display:none" />
+                            <input id="deskActionsBtn" type=button class="btn btn-primary btn-sm me-1"
+                                title="Perform power actions on the device" onkeypress="return false"
+                                onkeydown="return false" value=Actions onclick=deviceActionFunction() class="mR" />
+                            <input id="deskActionsSettings" type="button" class="btn btn-primary btn-sm me-1"
+                                value="Settings" title="Edit remote desktop settings" onkeypress="return false"
+                                onkeydown="return false" onclick="showDesktopSettings()" class="mR" />
+                            <input id="deskFocusBtn" type="button"
+                                title="Toggle focus mode, when active only the region around the mouse is updated"
+                                onkeypress="return false" onkeydown="return false" value="Focus All"
+                                onclick="deskToggleFocus()" style="margin-right:3px;display:none" />
+                            <div id="deskRecordIcon" class='deskareaicon' title="Server is recording this session"
+                                style="display:none;background-color:red;width:12px;height:12px;border-radius:6px;margin-top:5px">
+                            </div>
+                            <div class='deskareaicon' title="Rotate Right" onclick="drotate(1)"><i
+                                    class="fa-solid fa-rotate-right"></i></div>
+                            <div class='deskareaicon' title="Rotate Left" onclick="drotate(-1)"><i
+                                    class="fa-solid fa-rotate-left"></i></div>
+                            <div class='deskareaicon' title="Toggle View Mode" onclick="toggleAspectRatio(1)">&#8690;
+                            </div>
+                            <div id="idx_deskFullBtn2" onclick=deskToggleFull(event) style="float:right">&nbsp;&#x2716;
+                            </div>
                         </div>
                     </div>
                     <div id=deskarea3x>
@@ -973,7 +1146,8 @@
                         </div>
                         <div id=DeskTools>
                             <div id=deskToolsAreaTop>
-                                <a id=DeskToolsRefreshButton class="link-underline-primary" style="right:2px" onclick="refreshDeskTools()">Refresh</a>
+                                <a id=DeskToolsRefreshButton class="link-underline-primary" style="right:2px"
+                                    onclick="refreshDeskTools()">Refresh</a>
                                 <div id=deskToolsTopTabProcess class="deskToolsTopTab" onclick="changeDeskToolTab(0)"
                                     style="left:0px;bottom:0px">Processes</div>
                                 <div id=deskToolsTopTabService class="deskToolsTopTab" onclick="changeDeskToolTab(1)"
@@ -1007,43 +1181,64 @@
                     <div id=deskarea4 class="areaFoot d-flex flex-wrap">
                         <div class="d-flex align-items-center">
                             <select id="deskkeys" class="form-select-sm me-1" cmenu=deskKeyShortcutContextMenu></select>
-                            <input id="DeskWD" type=button class="btn btn-primary btn-sm me-1" value="Send" onkeypress="return false" onkeydown="return false" onclick="deskSendKeys()" />
-                            <input id="DeskESC" style="display:none" type="button" class="btn btn-secondary btn-sm me-1" value="ESC" onkeypress="return false" onkeydown="return false" onclick="sendDeskEsc()" />
-                            <input id="DeskClip" type="button" class="btn btn-secondary btn-sm me-1" value="Clipboard" onkeypress="return false" onkeydown="return false" onclick="showDeskClip()" />
-                            <input id="DeskType" class="btn btn-secondary btn-sm me-1" cmenu="deskPreConfigShortcutContextMenu" type="button" value="Type" onkeypress="return false" onkeydown="return false" onclick="showDeskType()" />
-                            <div id="DeskControlSpan" title="Toggle mouse and keyboard input" class="form-check"><input id="DeskControl" type="checkbox" class="form-check-input" onkeypress="return false" onkeydown="return false" onclick="toggleKvmControl()"><label class="form-check-label" for="DeskControl">Input</label></div>&nbsp;
+                            <input id="DeskWD" type=button class="btn btn-primary btn-sm me-1" value="Send"
+                                onkeypress="return false" onkeydown="return false" onclick="deskSendKeys()" />
+                            <input id="DeskESC" style="display:none" type="button" class="btn btn-secondary btn-sm me-1"
+                                value="ESC" onkeypress="return false" onkeydown="return false"
+                                onclick="sendDeskEsc()" />
+                            <input id="DeskClip" type="button" class="btn btn-secondary btn-sm me-1" value="Clipboard"
+                                onkeypress="return false" onkeydown="return false" onclick="showDeskClip()" />
+                            <input id="DeskType" class="btn btn-secondary btn-sm me-1"
+                                cmenu="deskPreConfigShortcutContextMenu" type="button" value="Type"
+                                onkeypress="return false" onkeydown="return false" onclick="showDeskType()" />
+                            <div id="DeskControlSpan" title="Toggle mouse and keyboard input" class="form-check"><input
+                                    id="DeskControl" type="checkbox" class="form-check-input" onkeypress="return false"
+                                    onkeydown="return false" onclick="toggleKvmControl()"><label
+                                    class="form-check-label" for="DeskControl">Input</label></div>&nbsp;
                         </div>
                         <div class="d-flex ms-auto align-items-center">
                             <span id=DeskMonitorSelectionSpan></span>
-                            <span id="DeskLatency" style="width:70px" class="text-center" title="Desktop Session Latency"></span>
+                            <span id="DeskLatency" style="width:70px" class="text-center"
+                                title="Desktop Session Latency"></span>
                             <span id="DeskTimer" style="width:70px" class="text-center" title="Session time"></span>
-                            <input id=DeskToolsButton type=button class="btn btn-primary btn-sm mx-1" value=Tools title="Toggle tools view" onkeypress="return false" onkeydown="return false" onclick="toggleDeskTools()" />
+                            <input id=DeskToolsButton type=button class="btn btn-primary btn-sm mx-1" value=Tools
+                                title="Toggle tools view" onkeypress="return false" onkeydown="return false"
+                                onclick="toggleDeskTools()" />
                             <span id=DeskGuestShareButton title="Share the device with a guest" role="button">
-                                <i class="fa-solid fa-fw fa-share-nodes" id=DeskInputUnLockedButtonImage onclick=showShareDevice()></i>
+                                <i class="fa-solid fa-fw fa-share-nodes" id=DeskInputUnLockedButtonImage
+                                    onclick=showShareDevice()></i>
                             </span>
                             <span id=DeskInputUnLockedButton title="Remote input is unlocked" role="button">
                                 <i class="fa-solid fa-fw fa-keyboard" onclick=deskInputLockFunction(1)></i>
                             </span>
                             <span id=DeskInputLockedButton title="Remote input is locked" role="button">
-                                <i class="fa-solid fa-fw fa-keyboard" style=color:red onclick=deskInputLockFunction(0)></i>
+                                <i class="fa-solid fa-fw fa-keyboard" style=color:red
+                                    onclick=deskInputLockFunction(0)></i>
                             </span>
                             <span id=DeskRefreshButton title="Refresh the desktop" role="button">
                                 <i class="fa-solid fa-fw fa-rotate" onclick=deskRefreshFunction()></i>
                             </span>
-                            <span id=DeskClipboardOutButton title="Upload local clipboard to remote device" role="button">
-                                <i class="fa-solid fa-fw fa-up-long" data-fa-transform="shrink-9 down-4" data-fa-mask="fa-solid fa-clipboard" onclick=deskClipboardOutFunction()></i>
+                            <span id=DeskClipboardOutButton title="Upload local clipboard to remote device"
+                                role="button">
+                                <i class="fa-solid fa-fw fa-up-long" data-fa-transform="shrink-9 down-4"
+                                    data-fa-mask="fa-solid fa-clipboard" onclick=deskClipboardOutFunction()></i>
                             </span>
-                            <span id=DeskClipboardInButton title="Download remote clipboard to local clipboard" style="display:none"  role="button">
-                                <i class="fa-solid fa-fw fa-down-long" data-fa-transform="shrink-9 down-4" data-fa-mask="fa-solid fa-clipboard" onclick=deskClipboardInFunction()></i>
+                            <span id=DeskClipboardInButton title="Download remote clipboard to local clipboard"
+                                style="display:none" role="button">
+                                <i class="fa-solid fa-fw fa-down-long" data-fa-transform="shrink-9 down-4"
+                                    data-fa-mask="fa-solid fa-clipboard" onclick=deskClipboardInFunction()></i>
                             </span>
-                            <span id=DeskRecordButton cmenu=deskPlayerContextMenu title="Record remote desktop session to file" style="display:none" role="button">
-                                <i class="fa-solid fa-fw fa-video" onclick=deskRecordSession() id=DeskRecordButtonImage></i>
+                            <span id=DeskRecordButton cmenu=deskPlayerContextMenu
+                                title="Record remote desktop session to file" style="display:none" role="button">
+                                <i class="fa-solid fa-fw fa-video" onclick=deskRecordSession()
+                                    id=DeskRecordButtonImage></i>
                             </span>
                             <span id=DeskSaveImageButton title="Save a screenshot of the remote desktop" role="button">
                                 <i class="fa-solid fa-fw fa-camera" onclick=deskSaveImage()></i>
                             </span>
                             <span id=DeskBackgroundButton title="Toggle remote desktop background" role="button">
-                                <i class="fa-solid fa-fw fa-image" onclick=deviceToggleBackground(event) id=DeskBackgroundButtonImage></i>
+                                <i class="fa-solid fa-fw fa-image" onclick=deviceToggleBackground(event)
+                                    id=DeskBackgroundButtonImage></i>
                             </span>
                             <span id=DeskOpenWebButton title="Open a web address on the remote computer" role="button">
                                 <i class="fa-solid fa-fw fa-globe" onclick=deviceUrlFunction()></i>
@@ -1051,13 +1246,16 @@
                             <span id=DeskLockButton title="Lock the remote computer" role="button">
                                 <i class="fa-solid fa-fw fa-lock" onclick=deviceLockFunction()></i>
                             </span>
-                            <span id=DeskNotifyButton title="Display a notification on the remote computer" role="button">
+                            <span id=DeskNotifyButton title="Display a notification on the remote computer"
+                                role="button">
                                 <i class="fa-solid fa-fw fa-bell" onclick=deviceToastFunction()></i>
                             </span>
-                            <span id=DeskChatButton class="deskarea" title="Open chat window to this computer" role="button">
+                            <span id=DeskChatButton class="deskarea" title="Open chat window to this computer"
+                                role="button">
                                 <i class="fa-solid fa-fw fa-message" onclick=deviceChat(event)></i>
                             </span>
-                            <span id=DeskRunButton cmenu="deskPreConfigScriptContextMenu" class="deskarea" title="Run a script on this computer" role="button">
+                            <span id=DeskRunButton cmenu="deskPreConfigScriptContextMenu" class="deskarea"
+                                title="Run a script on this computer" role="button">
                                 <i class="fa-solid fa-fw fa-play" onclick=runDeviceCmd()></i>
                             </span>
                         </div>
@@ -1067,21 +1265,24 @@
             <div id=p12 style="display:none">
                 <div id="p12title" class="d-flex align-items-center">
                     <div id="p12BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Terminal - <span id=p12deviceName></span></div>
                     <div id="devListToolbarViewIcons2" class="ms-auto">
-                        <i class="fa-solid fa-xl fa-maximize fa-border" role="button" onclick=deskToggleFull(event) title="Full Screen. Hold shift to browser full screen."></i>
+                        <i class="fa-solid fa-xl fa-maximize fa-border" role="button" onclick=deskToggleFull(event)
+                            title="Full Screen. Hold shift to browser full screen."></i>
                     </div>
                 </div>
                 <div id="p12warning" onclick=showFeaturesDlg()>
                     <div class="icon2"></div>
-                    <div class="warningbox">Redirection port or KVM feature is disabled<span id="p12warninga">, click here to enable it.</span></div>
+                    <div class="warningbox">Redirection port or KVM feature is disabled<span id="p12warninga">, click
+                            here to enable it.</span></div>
                 </div>
                 <div id="p12warning2" onclick=showPowerActionDlg()>
                     <div class="icon2"></div>
                     <div class="warningbox">Remote computer is not powered on, click here to issue a power command.
-                </div>
+                    </div>
                 </div>
                 <div id=termTable style="position:relative">
                     <table style="width:100%" cellpadding=0 cellspacing=0>
@@ -1093,29 +1294,56 @@
                                         onkeydown="return false" style="display:none"><i class="fa-solid fa-play"></i>
                                         AutoConnect</button>
                                     <div class="btn-group dropdown-center me-1" id=connectbutton2span>
-                                        <button type="button" class="btn btn-success btn-sm" id=connectbutton2 title="Connect using MeshAgent remote desktop" onclick=connectTerminal(event,1) onkeypress="return false" onkeydown="return false" disabled="disabled">Connect</button>
-                                        <button type="button" class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split" id=connectbutton2d data-bs-toggle="dropdown" aria-expanded="false" onclick=newContextMenu(event,1)><span class="visually-hidden">Toggle Dropdown</span></button>
+                                        <button type="button" class="btn btn-success btn-sm" id=connectbutton2
+                                            title="Connect using MeshAgent remote desktop"
+                                            onclick=connectTerminal(event,1) onkeypress="return false"
+                                            onkeydown="return false" disabled="disabled">Connect</button>
+                                        <button type="button"
+                                            class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split"
+                                            id=connectbutton2d data-bs-toggle="dropdown" aria-expanded="false"
+                                            onclick=newContextMenu(event,1)><span class="visually-hidden">Toggle
+                                                Dropdown</span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" onclick="cmtermaction(1,0,event)"><b>Admin Shell</b></a></li>
-                                            <li><a class="dropdown-item" onclick="cmtermaction(6,0,event)">Admin PowerShell</a></li>
-                                            <li><a class="dropdown-item" onclick="cmtermaction(8,0,event)">User Shell</a></li>
-                                            <li><a class="dropdown-item" onclick="cmtermaction(9,0,event)">User PowerShell</a></li>
-                                            <li><a class="dropdown-item" onclick="cmtermaction(1,0x10,event)">Ask Admin Shell</a></li>
-                                            <li><a class="dropdown-item" onclick="cmtermaction(6,0x10,event)">Ask Admin PowerShell</a></li>
-                                            <li><a class="dropdown-item" onclick="cmtermaction(8,0x10,event)">Ask User Shell</a></li>
-                                            <li><a class="dropdown-item" onclick="cmtermaction(9,0x10,event)">Ask User PowerShell</a></li>
-                                            <li class="ass"><a class="dropdown-item" onclick="cmtermaction(8,0,event)"><b>User Shell</b></a></li>
-                                            <li class="ass"><a class="dropdown-item" onclick="cmtermaction(9,0,event)">User PowerShell</a></li>
-                                            <li class="lin"><a class="dropdown-item" onclick="cmtermaction(1,0,event)"><b>Root Shell</b></a></li>
-                                            <li class="lin"><a class="dropdown-item" onclick="cmtermaction(8,0,event)">User Shell</a></li>
-                                            <li class="lin"><a class="dropdown-item" onclick="cmtermaction(100,0,event)">Login Shell</a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(1,0,event)"><b>Admin
+                                                        Shell</b></a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(6,0,event)">Admin
+                                                    PowerShell</a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(8,0,event)">User
+                                                    Shell</a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(9,0,event)">User
+                                                    PowerShell</a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(1,0x10,event)">Ask Admin
+                                                    Shell</a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(6,0x10,event)">Ask Admin
+                                                    PowerShell</a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(8,0x10,event)">Ask User
+                                                    Shell</a></li>
+                                            <li><a class="dropdown-item" onclick="cmtermaction(9,0x10,event)">Ask User
+                                                    PowerShell</a></li>
+                                            <li class="ass"><a class="dropdown-item"
+                                                    onclick="cmtermaction(8,0,event)"><b>User Shell</b></a></li>
+                                            <li class="ass"><a class="dropdown-item"
+                                                    onclick="cmtermaction(9,0,event)">User PowerShell</a></li>
+                                            <li class="lin"><a class="dropdown-item"
+                                                    onclick="cmtermaction(1,0,event)"><b>Root Shell</b></a></li>
+                                            <li class="lin"><a class="dropdown-item"
+                                                    onclick="cmtermaction(8,0,event)">User Shell</a></li>
+                                            <li class="lin"><a class="dropdown-item"
+                                                    onclick="cmtermaction(100,0,event)">Login Shell</a></li>
                                         </ul>
                                     </div>
                                     <div class="btn-group dropdown-center me-1" id=connectbutton2sspan>
-                                        <button type="button" class="btn btn-success btn-sm" id=connectbutton2s title="Connect using MeshAgent remote desktop" onclick=connectTerminal(event,3) onkeypress="return false" onkeydown="return false" disabled="disabled">SSH Connect</button>
-                                        <button type="button" class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split" id=connectbutton2sd data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                                        <button type="button" class="btn btn-success btn-sm" id=connectbutton2s
+                                            title="Connect using MeshAgent remote desktop"
+                                            onclick=connectTerminal(event,3) onkeypress="return false"
+                                            onkeydown="return false" disabled="disabled">SSH Connect</button>
+                                        <button type="button"
+                                            class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split"
+                                            id=connectbutton2sd data-bs-toggle="dropdown" aria-expanded="false"><span
+                                                class="visually-hidden">Toggle Dropdown</span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" onclick="cmsshportaction(1,event)">Alternate Port</a></li>
+                                            <li><a class="dropdown-item" onclick="cmsshportaction(1,event)">Alternate
+                                                    Port</a></li>
                                         </ul>
                                     </div>
                                     <span id="connectbutton2hspan"><button type="button"
@@ -1127,7 +1355,8 @@
                                             class="btn btn-danger btn-sm me-1" id="disconnectbutton2"
                                             onclick=connectTerminal(event,0) onkeypress="return false"
                                             onkeydown="return false">Disconnect</button></span>
-                                    <span id="termstatus" style="line-height:22px">Disconnected</span><span id="termtitle"></span>
+                                    <span id="termstatus" style="line-height:22px">Disconnected</span><span
+                                        id="termtitle"></span>
                                 </div>
                                 <div class="d-flex align-items-center ms-auto">
                                     <div id="idx_termFullBtn2" onclick=deskToggleFull(event) style="float:right">
@@ -1154,17 +1383,17 @@
                             <td class="areaFoot d-flex flex-wrap">
                                 <div class="d-flex align-items-center">
                                     <input type=button onkeypress="return false" onkeydown="return false"
-                                        class="btn btn-primary btn-sm me-1" id="ctrlcbutton"
-                                        value="Ctl-C" onclick="termSendKey(3,'ctrlcbutton')" />
+                                        class="btn btn-primary btn-sm me-1" id="ctrlcbutton" value="Ctl-C"
+                                        onclick="termSendKey(3,'ctrlcbutton')" />
                                     <input type=button onkeypress="return false" onkeydown="return false"
-                                        class="btn btn-primary btn-sm me-1" id="ctrlxbutton"
-                                        value="Ctl-X" onclick="termSendKey(24,'ctrlxbutton')" />
+                                        class="btn btn-primary btn-sm me-1" id="ctrlxbutton" value="Ctl-X"
+                                        onclick="termSendKey(24,'ctrlxbutton')" />
                                     <input type=button onkeypress="return false" onkeydown="return false"
-                                        class="btn btn-primary me-1 btn-sm" id="escbutton"
-                                        value="ESC" onclick="termSendKey(27,'escbutton')" />
+                                        class="btn btn-primary me-1 btn-sm" id="escbutton" value="ESC"
+                                        onclick="termSendKey(27,'escbutton')" />
                                     <input type=button onkeypress="return false" onkeydown="return false"
-                                        class="btn btn-primary me-1 btn-sm" id="bsbutton"
-                                        value="Backspace" onclick="termSendKey(8,'bsbutton')" style="display:none" />
+                                        class="btn btn-primary me-1 btn-sm" id="bsbutton" value="Backspace"
+                                        onclick="termSendKey(8,'bsbutton')" style="display:none" />
                                     <input type=button onkeypress="return false" onkeydown="return false"
                                         class="btn btn-primary me-1 btn-sm" id="pastebutton" value="Paste"
                                         title="Paste text into the terminal" onclick="showTermPasteDialog()"
@@ -1177,11 +1406,13 @@
                                             onkeydown="return false" class="btn btn-primary me-1 btn-sm" value="CR+LF"
                                             title="Toggle what the return key will send" onclick="termToggleCr()" />
                                         <input id="id_tfxkeysbutton" type="button" onkeypress="return false"
-                                            onkeydown="return false" class="btn btn-primary me-1 btn-sm" value="Intel (F10 = ESC+[OM)"
-                                            title="Toggle F1 to F10 keys emulation type" onclick="termToggleFx()" />
+                                            onkeydown="return false" class="btn btn-primary me-1 btn-sm"
+                                            value="Intel (F10 = ESC+[OM)" title="Toggle F1 to F10 keys emulation type"
+                                            onclick="termToggleFx()" />
                                         <input id="id_ttypebutton" type="button" onkeypress="return false"
-                                            onkeydown="return false" class="btn btn-primary me-1 btn-sm" value="Extended Ascii"
-                                            title="Toggle terminal emulation type" onclick="termToggleType()" />
+                                            onkeydown="return false" class="btn btn-primary me-1 btn-sm"
+                                            value="Extended Ascii" title="Toggle terminal emulation type"
+                                            onclick="termToggleType()" />
                                     </span>
                                     <span id="terminalSizeDropDown" style="display:none">
                                         <select id="termSizeList" onkeypress="return false" class="form-select-sm me-1">
@@ -1189,7 +1420,8 @@
                                             <option value="2">100x30</option>
                                         </select>
                                     </span>
-                                    <select id="specialkeylist" class="form-select-sm me-1" onkeypress="return false"></select>
+                                    <select id="specialkeylist" class="form-select-sm me-1"
+                                        onkeypress="return false"></select>
                                     <input id="specialkeylistinput" type="button" onkeypress="return false"
                                         class="btn btn-primary btn-sm me-1" value="Send"
                                         title="Send the selected special key" onclick="sendSpecialKey()" />
@@ -1205,7 +1437,8 @@
             <div id=p13 style="display:none">
                 <div id="p13title" class="d-flex align-items-center">
                     <div id="p13BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Files - <span id=p13deviceName></span></div>
                 </div>
@@ -1217,18 +1450,33 @@
                                     class="btn btn-primary btn-sm me-1" type="button" style="display:none"><i
                                         class="fa-solid fa-play"></i> AutoConnect</button>
                                 <div class="btn-group dropdown-center me-1" id=p13Connectspan>
-                                    <button type="button" class="btn btn-success btn-sm" id=p13Connect title="Connect using MeshAgent remote desktop" onclick=connectFiles(event,1) onkeypress="return false" onkeydown="return false" disabled="disabled">Connect</button>
-                                    <button type="button" class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split" id=p13Connectdrop data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                                    <button type="button" class="btn btn-success btn-sm" id=p13Connect
+                                        title="Connect using MeshAgent remote desktop" onclick=connectFiles(event,1)
+                                        onkeypress="return false" onkeydown="return false"
+                                        disabled="disabled">Connect</button>
+                                    <button type="button"
+                                        class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split"
+                                        id=p13Connectdrop data-bs-toggle="dropdown" aria-expanded="false"><span
+                                            class="visually-hidden">Toggle Dropdown</span></button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" onclick="cmconnectfilesaction()">Ask Consent</a></li>
+                                        <li><a class="dropdown-item" onclick="cmconnectfilesaction()">Ask Consent</a>
+                                        </li>
                                     </ul>
                                 </div>
-                                <button id=p13Disconnect class="btn btn-danger btn-sm me-1" onclick=connectFiles(event) type="button">Disconnect</button>
+                                <button id=p13Disconnect class="btn btn-danger btn-sm me-1" onclick=connectFiles(event)
+                                    type="button">Disconnect</button>
                                 <div class="btn-group dropdown-center me-1" id=p13Connectsspan>
-                                    <button type="button" class="btn btn-success btn-sm" id=p13Connects title="Connect using MeshAgent remote desktop" onclick=connectFiles(event,2) onkeypress="return false" onkeydown="return false" disabled="disabled">SFTP Connect</button>
-                                    <button type="button" class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split" id=p13Connectsdrop data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                                    <button type="button" class="btn btn-success btn-sm" id=p13Connects
+                                        title="Connect using MeshAgent remote desktop" onclick=connectFiles(event,2)
+                                        onkeypress="return false" onkeydown="return false" disabled="disabled">SFTP
+                                        Connect</button>
+                                    <button type="button"
+                                        class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split"
+                                        id=p13Connectsdrop data-bs-toggle="dropdown" aria-expanded="false"><span
+                                            class="visually-hidden">Toggle Dropdown</span></button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" onclick="cmsshportaction(1,event)">Alternate Port</a></li>
+                                        <li><a class="dropdown-item" onclick="cmsshportaction(1,event)">Alternate
+                                                Port</a></li>
                                     </ul>
                                 </div>
                                 <span id=p13Status>Disconnected</span>
@@ -1249,23 +1497,43 @@
                         <td class="areaHead2 d-flex align-items-center flex-wrap" valign=bottom>
                             <div id="p13rightOfButtons" class="toright2 d-flex align-items-center"></div>
                             <div class="d-flex align-items-center">
-                                <input type=button disabled="disabled" id=p13FolderUp class="btn btn-secondary me-1 btn-sm" value="Up" onclick="p13folderup()" />
-                                <input type=button disabled="disabled" id=p13SelectAllButton class="btn btn-secondary me-1 btn-sm" value="Select All" onclick="p13selectallfile()" />
-                                <input type=button disabled="disabled" id=p13RenameFileButton class="btn btn-primary me-1 btn-sm" value="Rename" onclick="p13renamefile()" />
-                                <input type=button disabled="disabled" id=p13DeleteFileButton class="btn btn-primary me-1 btn-sm" value="Delete" onclick="p13deletefile()" />
-                                <input type=button disabled="disabled" id=p13ViewFileButton class="btn btn-primary me-1 btn-sm" value="Edit" onclick="p13viewfile()" />
-                                <input type=button disabled="disabled" id=p13NewFolderButton class="btn btn-primary me-1 btn-sm" value="New Folder" onclick="p13createfolder()" />
-                                <input type=button disabled="disabled" id=p13UploadButton class="btn btn-primary me-1 btn-sm" value="Upload" onclick="p13uploadFile()" />
-                                <input type=button disabled="disabled" id=p13DownloadButton class="btn btn-primary me-1 btn-sm" value="Download" onclick="p13downloadButton()" />
-                                <input type=button disabled="disabled" id=p13CutButton class="btn btn-primary me-1 btn-sm" value="Cut" onclick="p13copyFile(1)" />
-                                <input type=button disabled="disabled" id=p13CopyButton class="btn btn-primary me-1 btn-sm" value="Copy" onclick="p13copyFile(0)" />
-                                <input type=button disabled="disabled" id=p13PasteButton class="btn btn-primary me-1 btn-sm" value="Paste" onclick="p13pasteFile()" />
-                                <input type=button disabled="disabled" id=p13ZipButton class="btn btn-primary me-1 btn-sm" value="Zip" onclick="p13zipFiles()" />
-                                <input type=button disabled="disabled" id=p13UnzipButton class="btn btn-primary me-1 btn-sm" value="Unzip" onclick="p13unzipFile()" />
-                                <input type=button disabled="disabled" id=p13RefreshButton class="btn btn-primary me-1 btn-sm" value="Refresh" onclick="p13folderup(9999)" />
-                                <input type=button disabled="disabled" id=p13FindButton class="btn btn-primary me-1 btn-sm" value="Find" onclick="p13findfile()" />
-                                <input type=button disabled="disabled" id=p13GoToFolderButton class="btn btn-primary me-1 btn-sm" value="GoTo" onclick="p13gotofolder()" />
-                                <input type=button disabled="disabled" id=p13OpenButton class="btn btn-primary me-1 btn-sm" value="Open" onclick="p13openfilefolder()" />
+                                <input type=button disabled="disabled" id=p13FolderUp
+                                    class="btn btn-secondary me-1 btn-sm" value="Up" onclick="p13folderup()" />
+                                <input type=button disabled="disabled" id=p13SelectAllButton
+                                    class="btn btn-secondary me-1 btn-sm" value="Select All"
+                                    onclick="p13selectallfile()" />
+                                <input type=button disabled="disabled" id=p13RenameFileButton
+                                    class="btn btn-primary me-1 btn-sm" value="Rename" onclick="p13renamefile()" />
+                                <input type=button disabled="disabled" id=p13DeleteFileButton
+                                    class="btn btn-primary me-1 btn-sm" value="Delete" onclick="p13deletefile()" />
+                                <input type=button disabled="disabled" id=p13ViewFileButton
+                                    class="btn btn-primary me-1 btn-sm" value="Edit" onclick="p13viewfile()" />
+                                <input type=button disabled="disabled" id=p13NewFolderButton
+                                    class="btn btn-primary me-1 btn-sm" value="New Folder"
+                                    onclick="p13createfolder()" />
+                                <input type=button disabled="disabled" id=p13UploadButton
+                                    class="btn btn-primary me-1 btn-sm" value="Upload" onclick="p13uploadFile()" />
+                                <input type=button disabled="disabled" id=p13DownloadButton
+                                    class="btn btn-primary me-1 btn-sm" value="Download"
+                                    onclick="p13downloadButton()" />
+                                <input type=button disabled="disabled" id=p13CutButton
+                                    class="btn btn-primary me-1 btn-sm" value="Cut" onclick="p13copyFile(1)" />
+                                <input type=button disabled="disabled" id=p13CopyButton
+                                    class="btn btn-primary me-1 btn-sm" value="Copy" onclick="p13copyFile(0)" />
+                                <input type=button disabled="disabled" id=p13PasteButton
+                                    class="btn btn-primary me-1 btn-sm" value="Paste" onclick="p13pasteFile()" />
+                                <input type=button disabled="disabled" id=p13ZipButton
+                                    class="btn btn-primary me-1 btn-sm" value="Zip" onclick="p13zipFiles()" />
+                                <input type=button disabled="disabled" id=p13UnzipButton
+                                    class="btn btn-primary me-1 btn-sm" value="Unzip" onclick="p13unzipFile()" />
+                                <input type=button disabled="disabled" id=p13RefreshButton
+                                    class="btn btn-primary me-1 btn-sm" value="Refresh" onclick="p13folderup(9999)" />
+                                <input type=button disabled="disabled" id=p13FindButton
+                                    class="btn btn-primary me-1 btn-sm" value="Find" onclick="p13findfile()" />
+                                <input type=button disabled="disabled" id=p13GoToFolderButton
+                                    class="btn btn-primary me-1 btn-sm" value="GoTo" onclick="p13gotofolder()" />
+                                <input type=button disabled="disabled" id=p13OpenButton
+                                    class="btn btn-primary me-1 btn-sm" value="Open" onclick="p13openfilefolder()" />
                             </div>
                         </td>
                     </tr>
@@ -1309,11 +1577,14 @@
             <div id=p14 style="display:none">
                 <div id="p14title" class="d-flex align-items-center">
                     <div id="p14BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
-                    <div class='fs-4 fw-bold'><span id=p14deviceNamePrefix>Intel&reg; AMT</span> - <span id=p14deviceName></span></div>
+                    <div class='fs-4 fw-bold'><span id=p14deviceNamePrefix>Intel&reg; AMT</span> - <span
+                            id=p14deviceName></span></div>
                     <div id="devListToolbarViewIcons" class="ms-auto">
-                        <i class="fa-solid fa-xl fa-maximize fa-border" role="button" onclick=deskToggleFull(event) title="Full Screen. Hold shift to browser full screen."></i>
+                        <i class="fa-solid fa-xl fa-maximize fa-border" role="button" onclick=deskToggleFull(event)
+                            title="Full Screen. Hold shift to browser full screen."></i>
                     </div>
                 </div>
                 <iframe id=p14iframe src="{{{domainurl}}}commander.ashx"></iframe>
@@ -1321,7 +1592,8 @@
             <div id=p15 style="display:none">
                 <div id="p15title" class="d-flex align-items-center">
                     <div id="p15BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'><span id=p15deviceName></span></div>
                 </div>
@@ -1330,9 +1602,13 @@
                         <td class="areaHead d-flex flex-wrap">
                             <div id="p15statetext" class="d-flex align-items-center"></div>
                             <div class="d-flex align-items-center ms-auto">
-                                <div id=p15coreName class="me-1" title="Information about current core running on this agent"></div>
-                                <input type=button id=p15uploadCore class="btn btn-primary me-1 btn-sm" value="Agent Action" onclick=p15uploadCore(event) title="Change the agent Java Script code module" />
-                                <i onclick=p15downloadConsoleText() title="Download console text" class="fa-solid fa-download me-1"></i>
+                                <div id=p15coreName class="me-1"
+                                    title="Information about current core running on this agent"></div>
+                                <input type=button id=p15uploadCore class="btn btn-primary me-1 btn-sm"
+                                    value="Agent Action" onclick=p15uploadCore(event)
+                                    title="Change the agent Java Script code module" />
+                                <i onclick=p15downloadConsoleText() title="Download console text"
+                                    class="fa-solid fa-download me-1"></i>
                             </div>
                         </td>
                     </tr>
@@ -1353,7 +1629,8 @@
                             <table style="width:100%">
                                 <tr>
                                     <td style="width:99%">
-                                        <input id=p15consoleText class="form-control" onkeyup=p15consoleSend(event) onfocus=onConsoleFocus(1) onblur=onConsoleFocus(0) />
+                                        <input id=p15consoleText class="form-control" onkeyup=p15consoleSend(event)
+                                            onfocus=onConsoleFocus(1) onblur=onConsoleFocus(0) />
                                     </td>
                                     <td>&nbsp;</td>
                                     <td id="p15outputselecttd">
@@ -1375,7 +1652,8 @@
             <div id=p16 style="display:none">
                 <div id="p16title" class="d-flex align-items-center">
                     <div id="p16BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Events - <span id=p16deviceName></span></div>
                 </div>
@@ -1402,7 +1680,8 @@
                                     <option notransval=1 value=500>Last 500</option>
                                     <option notransval=1 value=1000>Last 1000</option>
                                 </select>
-                                <i onclick=p3showDownloadEventsDialog(1) class="fa-solid fa-download" title="Download Events" style=cursor:pointer></i>
+                                <i onclick=p3showDownloadEventsDialog(1) class="fa-solid fa-download"
+                                    title="Download Events" style=cursor:pointer></i>
                             </div>
                         </td>
                     </tr>
@@ -1412,11 +1691,13 @@
             <div id=p17 style="display:none;">
                 <div id="p17title" class="d-flex align-items-center">
                     <div id="p17BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Details - <span id=p17deviceName></span></div>
                     <div id="devListToolbarViewIcons3" class="ms-auto">
-                        <i class="fa-solid fa-chart-line fa-xl fa-border" role="button" onclick=deskToggleCpuGraph(event) title="Show device CPU and memory usage."></i>
+                        <i class="fa-solid fa-chart-line fa-xl fa-border" role="button"
+                            onclick=deskToggleCpuGraph(event) title="Show device CPU and memory usage."></i>
                     </div>
                 </div>
                 <div id=p17info class="ps-0 pb-5 overflow-y-auto container-fluid">
@@ -1430,7 +1711,8 @@
                                     <div class=DevSt style=margin-bottom:3px;margin-left:16px><b>Live Graph</b></div>
                                     <div
                                         style="margin-bottom:10px;margin-left:16px;height:240px;width:calc(100% - 16px);position:relative">
-                                        <canvas id=deviceDetailsStats style="position:absolute;top:0;left:0;right:0;bottom:0"></canvas>
+                                        <canvas id=deviceDetailsStats
+                                            style="position:absolute;top:0;left:0;right:0;bottom:0"></canvas>
                                     </div>
                                     <div id="extraGraphValues" style="display:none;margin-left:30px;margin-bottom:15px">
                                     </div>
@@ -1444,7 +1726,8 @@
             <div id=p19 style="display:none">
                 <div id="p19title" class="d-flex align-items-center">
                     <div id="p19BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Plugins - <span id=p19deviceName></span></div>
                 </div>
@@ -1455,7 +1738,8 @@
                 <div id=p20main style="overflow-y:auto">
                     <div id=p20title class="d-flex align-items-center">
                         <div id="p20BackButton" class="pe-2">
-                            <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                            <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                                title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                         </div>
                         <div class='fs-4 fw-bold'>General - <span id=p20meshName></span></div>
                     </div>
@@ -1470,26 +1754,31 @@
             <div id=p21 style="display:none">
                 <div id=p21title class="d-flex align-items-center">
                     <div id="p21BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Summary - <span id=p21meshName></span></div>
                 </div>
                 <div id=p21main style="overflow-y:auto">
                     <div style="width:100%">
                         <div style="display:table;width:93%">
-                            <div id="meshPowerChartDiv" style="width:23%;display:inline-block;text-align:center;max-width:250px">
+                            <div id="meshPowerChartDiv"
+                                style="width:23%;display:inline-block;text-align:center;max-width:250px">
                                 <div style="margin:10px;font-size:16px">Power States</div>
                                 <canvas id="meshPowerChart" style="width:250px;height:250px"></canvas>
                             </div>
-                            <div id="meshOsChartDiv" style="width:23%;display:inline-block;text-align:center;max-width:250px">
+                            <div id="meshOsChartDiv"
+                                style="width:23%;display:inline-block;text-align:center;max-width:250px">
                                 <div style="margin:10px;font-size:16px">Agent Types</div>
                                 <canvas id="meshOsChart" style="width:250px;height:250px"></canvas>
                             </div>
-                            <div id="meshConnChartDiv" style="width:23%;display:inline-block;text-align:center;max-width:250px">
+                            <div id="meshConnChartDiv"
+                                style="width:23%;display:inline-block;text-align:center;max-width:250px">
                                 <div style="margin:10px;font-size:16px">Connectivity</div>
                                 <canvas id="meshConnChart" style="width:250px;height:250px"></canvas>
                             </div>
-                            <div id="meshSecurityChartDiv" style="width:23%;display:inline-block;text-align:center;max-width:250px">
+                            <div id="meshSecurityChartDiv"
+                                style="width:23%;display:inline-block;text-align:center;max-width:250px">
                                 <div style="margin:10px;font-size:16px">Security</div>
                                 <canvas id="meshSecurityChart" style="width:250px;height:250px"></canvas>
                             </div>
@@ -1501,7 +1790,8 @@
             <div id=p30 style="display:none">
                 <div id=p30title class="d-flex align-items-center">
                     <div id="p30BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>General - <span id=p30userName></span></div>
                 </div>
@@ -1512,14 +1802,16 @@
                         </div>
                         <div class="col-auto" style="width: 20px;"></div>
                         <div class="col-auto" style="width: 200px; position: relative;">
-                            <img id="p30userAuthServiceLogo" style="display:none" class="userAuthStrategyLogo" width="64" height="64">
+                            <img id="p30userAuthServiceLogo" style="display:none" class="userAuthStrategyLogo"
+                                width="64" height="64">
                             <picture id="MainUserImage"
                                 style="display:none; border-width:0px; height:200px; width:200px; float:right"
                                 onclick="account_manageImage(1)">
                                 <source type="image/webp" width="200" height="200" srcset="images/webp/user-256.webp" />
                                 <img alt="" width="200" height="200" src="images/user-256.png" />
                             </picture>
-                            <img id="MainUserImageEx" alt="" width="200" height="200" src="images/user-256.png" onclick="account_manageImage(1)" />
+                            <img id="MainUserImageEx" alt="" width="200" height="200" src="images/user-256.png"
+                                onclick="account_manageImage(1)" />
                             <div style="width:100%;text-align:center;">
                                 <strong><span id="MainUserState"></span></strong>
                             </div>
@@ -1535,7 +1827,8 @@
             <div id=p31 style="display:none">
                 <div id=p31title class="d-flex align-items-center">
                     <div id="p31BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>Events - <span id=p31userName></span></div>
                 </div>
@@ -1565,7 +1858,8 @@
                                     <option notransval=1 value=1000>Last 1000</option>
                                     <option notransval=1 value="">No limit</option>
                                 </select>
-                                <a href=# onclick=p3showDownloadEventsDialog(3)><i class="fa-solid fa-download" role="button" title="Download Events"></i></a>
+                                <a href=# onclick=p3showDownloadEventsDialog(3)><i class="fa-solid fa-download"
+                                        role="button" title="Download Events"></i></a>
                             </div>
                         </td>
                         {{!-- <td class="h2"></td> --}}
@@ -1579,8 +1873,11 @@
                 </div>
                 <div class="areaHead d-flex align-items-center flex-wrap p-1">
                     <div class="d-flex align-items-center">
-                        <input value="Refresh" type="button" class="btn btn-primary btn-sm me-2" onclick="refreshServerTimelineStats()" />
-                        <div class="form-check"><input class="form-check-input me-1" type=checkbox id=p40log onclick="updateServerTimelineHours()" /><label class="form-check-label" for="p40log">Log-X</label></div>
+                        <input value="Refresh" type="button" class="btn btn-primary btn-sm me-2"
+                            onclick="refreshServerTimelineStats()" />
+                        <div class="form-check"><input class="form-check-input me-1" type=checkbox id=p40log
+                                onclick="updateServerTimelineHours()" /><label class="form-check-label"
+                                for="p40log">Log-X</label></div>
                     </div>
                     <div class="toright2 d-flex align-items-center ms-auto">
                         <select id=p40server style="display:none" onchange=updateServerTimelineStats()></select>
@@ -1598,7 +1895,8 @@
                             <option value=168>Last week</option>
                             <option value=720>Last 30 days</option>
                         </select>
-                        <i class="fa-solid fa-download" title="Download data points (.csv)" style=cursor:pointer onclick=p40downloadEvents()></i>
+                        <i class="fa-solid fa-download" title="Download data points (.csv)" style=cursor:pointer
+                            onclick=p40downloadEvents()></i>
                     </div>
                 </div>
                 <canvas id=serverMainStats style=""></canvas>
@@ -1609,7 +1907,8 @@
                 </div>
                 <div class="areaHead d-flex align-items-center flex-wrap p-1">
                     <div class="d-flex align-items-center">
-                        <input value="Tracing" type="button" class="btn btn-primary btn-sm me-1" onclick="setServerTracing()" />
+                        <input value="Tracing" type="button" class="btn btn-primary btn-sm me-1"
+                            onclick="setServerTracing()" />
                         <span id="p41traceStatus">None</span>
                     </div>
                     <div class="toright2 d-flex align-items-center ms-auto">
@@ -1620,8 +1919,10 @@
                             <option value=500>Last 500</option>
                             <option value=1000>Last 1000</option>
                         </select>
-                        <input value="Clear" type="button" class="btn btn-primary btn-sm me-1" onclick="clearServerTracing()" />
-                        <i class="fa-solid fa-download" title="Download trace (.csv)" style=cursor:pointer onclick=p41downloadServerTrace()></i>
+                        <input value="Clear" type="button" class="btn btn-primary btn-sm me-1"
+                            onclick="clearServerTracing()" />
+                        <i class="fa-solid fa-download" title="Download trace (.csv)" style=cursor:pointer
+                            onclick=p41downloadServerTrace()></i>
                     </div>
                 </div>
                 <div id=p41events style=""></div>
@@ -1640,7 +1941,8 @@
                         <input value="Refresh Agent Cores" type="button" onclick="distributeCore();return false" />
                     </div>
                     <div style="padding:2px">
-                        <div style="padding:2px"><b>Notice:</b> Plugins have been altered, this may require agent core update.</div>
+                        <div style="padding:2px"><b>Notice:</b> Plugins have been altered, this may require agent core
+                            update.</div>
                     </div>
                 </div>
                 <table id="p42tbl">
@@ -1657,7 +1959,8 @@
                         <th style="width:10px"></th>
                     </tr>
                 </table>
-                <div id="pluginNoneNotice" style="width:100%;text-align:center;padding-top:10px;display:none"><i>No plugins on server.</i></div>
+                <div id="pluginNoneNotice" style="width:100%;text-align:center;padding-top:10px;display:none"><i>No
+                        plugins on server.</i></div>
             </div>
             <div id=p43 style="display:none">
                 <div id="p43BackButton">
@@ -1678,10 +1981,15 @@
                     <tr>
                         <td class="style14 d-flex align-items-center flex-wrap p-1">
                             <div id="p50userGroupOps" class="d-flex align-items-center">
-                                <input type=button id=UsersGroupsSelectAllButton class="btn btn-secondary btn-sm me-1" onclick="p50usersSelectallButtonFunction()" value="Select All" />
-                                <input type=button id=UsersGroupsGroupActionButton class="btn btn-primary btn-sm me-1" disabled="disabled" value="Group Action" onclick=p50usersGroupActionFunction() />
-                                <input id=NewUserGroupButton type=button class="btn btn-success btn-sm me-1" onclick=showCreateUserGroupDialog(1) value="New Group..." />
-                                <input id=DuplicateUserGroupButton type=button class="btn btn-primary button-outline-success btn-sm me-1" style=display:none onclick=showCreateUserGroupDialog(2) value="Duplicate Group..." />
+                                <input type=button id=UsersGroupsSelectAllButton class="btn btn-secondary btn-sm me-1"
+                                    onclick="p50usersSelectallButtonFunction()" value="Select All" />
+                                <input type=button id=UsersGroupsGroupActionButton class="btn btn-primary btn-sm me-1"
+                                    disabled="disabled" value="Group Action" onclick=p50usersGroupActionFunction() />
+                                <input id=NewUserGroupButton type=button class="btn btn-success btn-sm me-1"
+                                    onclick=showCreateUserGroupDialog(1) value="New Group..." />
+                                <input id=DuplicateUserGroupButton type=button
+                                    class="btn btn-primary button-outline-success btn-sm me-1" style=display:none
+                                    onclick=showCreateUserGroupDialog(2) value="Duplicate Group..." />
                             </div>
                         </td>
                     </tr>
@@ -1691,7 +1999,8 @@
             <div id=p51 style="display:none">
                 <div id=p51title class="d-flex align-items-center">
                     <div id="p51BackButton" class="pe-2">
-                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack() title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
+                        <i class="fa-solid fa-square-caret-left fa-2xl" role="button" tabindex=0 onclick=goBack()
+                            title="Back" onkeypress="if (event.key == 'Enter') goBack()"></i>
                     </div>
                     <div class='fs-4 fw-bold'>User Group - <span id=p51groupName></span></div>
                 </div>
@@ -1724,10 +2033,12 @@
                     <tr>
                         <td class="style14 d-flex align-items-center flex-wrap p-1">
                             <div class="d-flex align-items-center">
-                                <input type=button class="btn btn-primary btn-sm" onclick=refreshRecodings() value="Refresh" />
+                                <input type=button class="btn btn-primary btn-sm" onclick=refreshRecodings()
+                                    value="Refresh" />
                             </div>
                             <div class="d-flex align-items-center ms-auto">
-                                <input type=button class="btn btn-primary btn-sm" onclick=openRecodringPlayer() value="Open Player..." />
+                                <input type=button class="btn btn-primary btn-sm" onclick=openRecodringPlayer()
+                                    value="Open Player..." />
                             </div>
                         </td>
                     </tr>
@@ -1743,10 +2054,12 @@
                         {{!-- <td class="h1"></td> --}}
                         <td class="style14">
                             <div style="float:right;line-height:22px">
-                                <a id="p60downloadReportDiv" style="display:none" href=# onclick=p60downloadReport()><i class="fa-solid fa-download" title="Download Report"></i></a>&nbsp;
+                                <a id="p60downloadReportDiv" style="display:none" href=# onclick=p60downloadReport()><i
+                                        class="fa-solid fa-download" title="Download Report"></i></a>&nbsp;
                             </div>
                             <div>
-                                <button class="btn btn-primary btn-sm me-2 m-1" onclick=generateReportDialog()><i class="fa-regular fa-file-alt"></i> Generate Report...</button>
+                                <button class="btn btn-primary btn-sm me-2 m-1" onclick=generateReportDialog()><i
+                                        class="fa-regular fa-file-alt"></i> Generate Report...</button>
                             </div>
                         </td>
                         {{!-- <td class="h2"></td> --}}
@@ -1763,7 +2076,8 @@
                     <div class="col-md-6 d-flex gap-2">
                     </div>
                     <div class="col-md-6">
-                        <a id="verifyEmailId2" style="display:none" href=# onclick="account_showVerifyEmail()">Verify Email</a>
+                        <a id="verifyEmailId2" style="display:none" href=# onclick="account_showVerifyEmail()">Verify
+                            Email</a>
                         &nbsp;<a id="termsLinkFooter" href=terms>Terms &amp; Privacy</a>
                     </div>
                 </div>
@@ -1805,23 +2119,32 @@
                             </div>
                             <div id=d3servermode>
                                 <div id=d3serveraction valign=bottom>
-                                    <input type=button id=p3FolderUp disabled="disabled" onclick=d3folderup() value="Up" />&nbsp;<span id=p3CurrentFolder></span>
+                                    <input type=button id=p3FolderUp disabled="disabled" onclick=d3folderup()
+                                        value="Up" />&nbsp;<span id=p3CurrentFolder></span>
                                 </div>
                                 <div id=d3serverfiles></div>
                             </div>
                         </div>
                         <div id=dialog4 style="">
-                            <input id="d4WrapButton" class="btn btn-primary me-1 mb-1" type="button" value="Wrap On" onclick="d4ToggleWrap()" />
-                            <input id="d4SizeButton" class="btn btn-primary me-1 mb-1" type="button" value="Small" onclick="d4ToggleSize()" />
-                            <input id="d4EncodingButton" class="btn btn-primary me-1 mb-1" type="button" value="Raw" onclick="d4ToggleEncoding()" />
-                            <input id="d4LineBreakButton" class="btn btn-primary me-1 mb-1" type="button" value="Windows" onclick="d4ToggleLineBreak()" />
-                            <textarea id=d4editorarea autocomplete="off" style="height:calc(100vh - 286px);width:100%;overflow:scroll;resize:none;white-space:pre"></textarea>
+                            <input id="d4WrapButton" class="btn btn-primary me-1 mb-1" type="button" value="Wrap On"
+                                onclick="d4ToggleWrap()" />
+                            <input id="d4SizeButton" class="btn btn-primary me-1 mb-1" type="button" value="Small"
+                                onclick="d4ToggleSize()" />
+                            <input id="d4EncodingButton" class="btn btn-primary me-1 mb-1" type="button" value="Raw"
+                                onclick="d4ToggleEncoding()" />
+                            <input id="d4LineBreakButton" class="btn btn-primary me-1 mb-1" type="button"
+                                value="Windows" onclick="d4ToggleLineBreak()" />
+                            <textarea id=d4editorarea autocomplete="off"
+                                style="height:calc(100vh - 286px);width:100%;overflow:scroll;resize:none;white-space:pre"></textarea>
                         </div>
                         <div id=dialog7 class="tab-content" style="">
                             <div class="nav nav-pills mb-3">
-                                <button id="td7meshkvm" class="nav-link" onclick="changeDesktopSettingsTab(event, 'd7meshkvm')">Agent</button>
-                                <button id="td7rdpkvm" class="nav-link" onclick="changeDesktopSettingsTab(event, 'd7rdpkvm')">RDP</button>
-                                <button id="td7amtkvm" class="nav-link" onclick="changeDesktopSettingsTab(event, 'd7amtkvm')">Intel&reg; AMT</button>
+                                <button id="td7meshkvm" class="nav-link"
+                                    onclick="changeDesktopSettingsTab(event, 'd7meshkvm')">Agent</button>
+                                <button id="td7rdpkvm" class="nav-link"
+                                    onclick="changeDesktopSettingsTab(event, 'd7rdpkvm')">RDP</button>
+                                <button id="td7amtkvm" class="nav-link"
+                                    onclick="changeDesktopSettingsTab(event, 'd7amtkvm')">Intel&reg; AMT</button>
                             </div>
                             <div id="d7meshkvm" class="tab-pane">
                                 <!--<h4>Agent Remote Desktop</h4>-->
@@ -1865,23 +2188,29 @@
                                     <div id="d7otherset2" class="p-2">
                                         <div class="form-check">
                                             <input id="d7deskSwapMouse" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7deskSwapMouse" class="form-check-label">Swap Mouse Buttons</label>
+                                            <label for="d7deskSwapMouse" class="form-check-label">Swap Mouse
+                                                Buttons</label>
                                         </div>
                                         <div class="form-check">
                                             <input id="d7deskrmw" class="form-check-input me-2" type="checkbox" />
                                             <label for="d7deskrmw" class="form-check-label">Reverse Mouse Wheel</label>
                                         </div>
                                         <div class="form-check">
-                                            <input id="d7deskRemoteKeyMap" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7deskRemoteKeyMap" class="form-check-label">Use Remote Keyboard Map</label>
+                                            <input id="d7deskRemoteKeyMap" class="form-check-input me-2"
+                                                type="checkbox" />
+                                            <label for="d7deskRemoteKeyMap" class="form-check-label">Use Remote Keyboard
+                                                Map</label>
                                         </div>
                                         <div id="d7deskAutoClipboardLabel" class="form-check">
-                                            <input id="d7deskAutoClipboard" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7deskAutoClipboard" class="form-check-label">Automatic Clipboard</label>
+                                            <input id="d7deskAutoClipboard" class="form-check-input me-2"
+                                                type="checkbox" />
+                                            <label for="d7deskAutoClipboard" class="form-check-label">Automatic
+                                                Clipboard</label>
                                         </div>
                                         <div id="d7deskAutoLockLabel" class="form-check">
                                             <input id="d7deskAutoLock" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7deskAutoLock" class="form-check-label">Lock on Disconnect</label>
+                                            <label for="d7deskAutoLock" class="form-check-label">Lock on
+                                                Disconnect</label>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -1906,11 +2235,13 @@
                                         </div>
                                         <div class="form-check">
                                             <input id="d7showcursor" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7showcursor" class="form-check-label">Show Local Mouse Cursor</label>
+                                            <label for="d7showcursor" class="form-check-label">Show Local Mouse
+                                                Cursor</label>
                                         </div>
                                         <div class="form-check">
                                             <input id="d7localKeyMap" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7localKeyMap" class="form-check-label">Local Keyboard Map</label>
+                                            <label for="d7localKeyMap" class="form-check-label">Local Keyboard
+                                                Map</label>
                                         </div>
                                         <div class="form-check">
                                             <input id="d7kvmrmw" class="form-check-input me-2" type="checkbox" />
@@ -1945,7 +2276,8 @@
                                         </div>
                                         <div class="form-check">
                                             <input id="d7rdp2" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7rdp2" class="form-check-label">Disable Full Window Drag</label>
+                                            <label for="d7rdp2" class="form-check-label">Disable Full Window
+                                                Drag</label>
                                         </div>
                                         <div class="form-check">
                                             <input id="d7rdp3" class="form-check-input me-2" type="checkbox" />
@@ -1969,7 +2301,8 @@
                                         </div>
                                         <div class="form-check">
                                             <input id="d7rdp9" class="form-check-input me-2" type="checkbox" />
-                                            <label for="d7rdp9" class="form-check-label">Enable Desktop Composision</label>
+                                            <label for="d7rdp9" class="form-check-label">Enable Desktop
+                                                Composision</label>
                                         </div>
                                         <div class="form-check">
                                             <input id="d7rdpclip" class="form-check-input me-2" type="checkbox" />
@@ -1989,9 +2322,11 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="idx_dlgCancelButton">Cancel</button>
-                        <button type="button" class="btn btn-primary" id="idx_dlgOkButton" >OK</button>
-                        <button type="button" class="btn btn-danger" id="idx_dlgDeleteButton" style="display:none">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            id="idx_dlgCancelButton">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="idx_dlgOkButton">OK</button>
+                        <button type="button" class="btn btn-danger" id="idx_dlgDeleteButton"
+                            style="display:none">Delete</button>
                         <!-- <div id="idx_dlgMoreButtons">
                             <a href="#" id="idx_dlgMoreButtons1" class="btn btn-primary"
                                 title="Toggle advanced options" onclick="MoreToggle(true)">&#x25BC;</a>
@@ -2018,7 +2353,9 @@
                 class="btn btn-outline-success" /></form>
 
 
-        <audio id="chimes"><source src="sounds/chimes.mp3" type="audio/mp3" /></audio>
+        <audio id="chimes">
+            <source src="sounds/chimes.mp3" type="audio/mp3" />
+        </audio>
         <iframe style=display:none name="fileDownloadFrame"></iframe>
     </div>
     <script type="text/javascript">
@@ -2099,7 +2436,7 @@
         var footerBar = (getstore('footerBar', '1') == '1');
         var sessionActivity = Date.now();
         var updateSessionTimer = null;
-        var pluginHandlerBuilder = {{{pluginHandler}}};
+        var pluginHandlerBuilder = {{{ pluginHandler }}};
         var pluginHandler = null;
         if (pluginHandlerBuilder != null) { pluginHandler = new pluginHandlerBuilder(); }
         var installedPluginList = null;
@@ -2674,17 +3011,17 @@
                 if (userImage) {
                     userImage.src = userImageSrc;
                 }
-                
+
                 var userDropdownButton = Q('userDropdownButton');
                 if (userDropdownButton) {
-                    userDropdownButton.onclick = function(e) {
+                    userDropdownButton.onclick = function (e) {
                         e.preventDefault();
                         e.stopPropagation();
                         toggleUserDropdown();
                         return false;
                     };
                 }
-                
+
                 var userDropdownMenu = Q('userDropdownMenu');
                 if (userDropdownMenu) {
                     userDropdownMenu.style.display = 'none';
@@ -2700,7 +3037,7 @@
             var uiSubmenu = Q('uiSubmenu');
             if (uiSubmenu) {
                 var isVisible = (uiSubmenu.style.display == 'block');
-                
+
                 if (isVisible) {
                     uiSubmenu.style.display = 'none';
                     uiSubmenu.classList.remove('show');
@@ -2716,13 +3053,13 @@
                     if (chevronIcon) {
                         chevronIcon.classList.add('rotated');
                     }
-                    setTimeout(function() {
+                    setTimeout(function () {
                         document.addEventListener('click', closeUISubmenu);
                     }, 10);
                 }
             }
         }
-        
+
         function closeUISubmenu(event) {
             var uiSubmenu = Q('uiSubmenu');
             var userDropdown = Q('userDropdown');
@@ -2746,10 +3083,16 @@
             toggleFullScreen(0);
             toggleStackMenu(0);
             if (webPageStackMenu && (xxcurrentView >= 10)) { QC('column_l').add('room4submenu'); } else { QC('column_l').remove('room4submenu'); }
-            updateSelf()
-            updateSiteAdmin();
+            updateMobileTopBarVisibility();
             adjustPanels();
         }
+
+
+        function UpdatePermissionsCheck() {
+            updateSiteAdmin();
+            updateSelf()
+        }
+
 
         function updateMobileTopBarVisibility() {
             try {
@@ -2762,6 +3105,20 @@
                             items[i].classList.remove('d-none');
                         }
                     }
+                }
+
+                if ((uiMode != 2) && (uiMode != 3)) {
+                    var serverFeatures = parseInt('{{{serverfeatures}}}');
+                    var siteRights = userinfo.siteadmin;
+
+                    // Server Menu Item
+                    ((siteRights & 21) && ((serverFeatures & 64) != 0)) ? QC('mobileServerMenuItem').remove('d-none') : QC('mobileServerMenuItem').add('d-none');
+
+                    // Files Menu Item
+                    (siteRights & 8) ? QC('mobileFilesMenuItem').remove('d-none') : QC('mobileFilesMenuItem').add('d-none');
+
+                    // Users Menu Item
+                    (((users != null) && ((features & 4) == 0)) || (((userinfo.siteadmin & 512) != 0) && ((features & 0x08000000) != 0))) ? QC('mobileUsersMenuItem').remove('d-none') : QC('mobileUsersMenuItem').add('d-none');
                 }
             } catch (ex) { }
         }
@@ -2857,8 +3214,8 @@
         function toggleBootstrapUIMode() {
             if (xxdialogMode) return;
             var uiViewMode = getstore('uiViewMode', 3);
-            var x = '<div class=form-check><input type=radio class=form-check-input id=ui0 name=uiradio value=2 ' + ((uiViewMode == 2)?'checked':'') + '><label class=form-check-label for=ui0>' + "Classic" + '</label></div>';
-            x += '<div class=form-check><input type=radio class=form-check-input id=ui1 name=uiradio value=3 ' + ((uiViewMode == 3)?'checked':'') + '><label class=form-check-label for=ui1>' + "Modern" + '</label></div>';
+            var x = '<div class=form-check><input type=radio class=form-check-input id=ui0 name=uiradio value=2 ' + ((uiViewMode == 2) ? 'checked' : '') + '><label class=form-check-label for=ui0>' + "Classic" + '</label></div>';
+            x += '<div class=form-check><input type=radio class=form-check-input id=ui1 name=uiradio value=3 ' + ((uiViewMode == 3) ? 'checked' : '') + '><label class=form-check-label for=ui1>' + "Modern" + '</label></div>';
             setModalContent('xxAddAgent', "User Interface", x);
             showModal('xxAddAgentModal', 'idx_dlgOkButton', saveUserInterfaceMode);
             QV('uiMenu', false);
@@ -2927,6 +3284,7 @@
         }
 
         function updateSiteAdmin() {
+            if (!userinfo) return;
             var serverFeatures = parseInt('{{{serverfeatures}}}');
             var siteRights = userinfo.siteadmin;
             var accountSettingsLocked = ((siteRights != 0xFFFFFFFF) && ((siteRights & 1024) != 0)) || ((features2 & 0x100) != 0); // Not admin and have account features locked, or using a loginToken
@@ -2945,7 +3303,6 @@
             QV('p2AccountImageFrame', !accountSettingsLocked)
             QV('p2ServerActions', (siteRights & 21) && ((serverFeatures & 143) != 0));
             QV('LeftMenuMyServer', (siteRights & 21) && ((serverFeatures & 64) != 0)); // 16 + 4 + 1
-            ((siteRights & 21) && ((serverFeatures & 64) != 0)) ? QC('mobileServerMenuItem').remove('d-none') : QC('mobileServerMenuItem').add('d-none');
             QV('MainMenuMyServer', siteRights & 21);
             QV('p2ServerActionsBackup', (siteRights & 1) && ((serverFeatures & 1) != 0));
             QV('p2ServerActionsRestore', (siteRights & 4) && ((serverFeatures & 2) != 0));
@@ -2954,7 +3311,6 @@
             QV('p2ServerActionsConfig', (siteRights & 16) && ((serverFeatures & 128) != 0));
             QV('MainMenuMyFiles', siteRights & 8);
             QV('LeftMenuMyFiles', siteRights & 8);
-            (siteRights & 8) ? QC('mobileFilesMenuItem').remove('d-none') : QC('mobileFilesMenuItem').add('d-none');
             if (((siteRights & 8) == 0) && (xxcurrentView == 5)) { setDialogMode(0); go(1); }
             if (currentNode != null) { gotoDevice(currentNode._id, xxcurrentView, true); }
 
@@ -3084,12 +3440,11 @@
             // Adjust "My Users" tabs
             QV('MainMenuMyUsers', ((users != null) && ((features & 4) == 0)) || (((userinfo.siteadmin & 512) != 0) && ((features & 0x08000000) != 0)));
             QV('LeftMenuMyUsers', ((users != null) && ((features & 4) == 0)) || (((userinfo.siteadmin & 512) != 0) && ((features & 0x08000000) != 0)));
-            (((users != null) && ((features & 4) == 0)) || (((userinfo.siteadmin & 512) != 0) && ((features & 0x08000000) != 0))) ? QC('mobileUsersMenuItem').remove('d-none') : QC('mobileUsersMenuItem').add('d-none');
             QV('UsersGeneral', ((users != null) && ((features & 4) == 0)));
             QV('UsersGroups', ((users != null) && ((features & 4) == 0)));
             QV('UsersRecordings', ((userinfo.siteadmin & 512) != 0) && ((features & 0x08000000) != 0));
+            updateMobileTopBarVisibility();
         }
-
         function setSessionActivity() { sessionActivity = Date.now(); QH('idleTimeoutNotify', ''); }
         function checkIdleSessionTimeout() {
             var delta = (Date.now() - sessionActivity);
@@ -3110,7 +3465,7 @@
                 }
                 if (serverinfo.logoutonidlesessiontimeout) {
                     if (urlargs.key) { window.location.href = 'logout?key=' + urlargs.key; }
-					else { window.location.href = 'logout'; }
+                    else { window.location.href = 'logout'; }
                 }
             } else {
                 var ds = Math.round((serverinfo.timeout - delta) / 1000);
@@ -3767,7 +4122,7 @@
                     x += '<button type=button class="btn btn-warning" onclick="account_manageOtp(1);">' + "Generate New Tokens" + '</input>';
                     if (message.passwords != null) {
                         x += '<button type=button class="btn btn-danger" onclick="account_manageOtp(2);">' + "Clear Tokens" + '</button></div>';
-                        x += '&nbsp;<i class="fa-regular fa-clipboard" title="' +  "Copy valid codes to clipboard" + '" style="cursor:pointer" onclick=copyTextToClip2("' + encodeURIComponentEx(clipb) + '")></i>';
+                        x += '&nbsp;<i class="fa-regular fa-clipboard" title="' + "Copy valid codes to clipboard" + '" style="cursor:pointer" onclick=copyTextToClip2("' + encodeURIComponentEx(clipb) + '")></i>';
                     } else {
                         x += '</div>'
                     }
@@ -3795,7 +4150,7 @@
                     var hkeycount = (typeof userinfo.otphkeys == 'number') ? userinfo.otphkeys : 0;
                     if ((typeof serverinfo.maxfidokeys != 'number') || (serverinfo.maxfidokeys > hkeycount)) { // Check if we we reached maximum hardware keys
                         if ((features & 0x00020000) != 0) { x += '<button class="btn btn-primary" id=d2addkey3 type=button onclick="account_addhkey(3);">' + "Add Key" + '</input>'; }
-                        if ((features & 0x00004000) != 0) { x += '<button class="btn btn-primary" id=d2addkey2 type=button onclick="account_addhkey(2);">' + "Add YubiKey&reg; OTP" +'</input>'; }
+                        if ((features & 0x00004000) != 0) { x += '<button class="btn btn-primary" id=d2addkey2 type=button onclick="account_addhkey(2);">' + "Add YubiKey&reg; OTP" + '</input>'; }
                     } else {
                         x += "Maximum keys reached.";
                     }
@@ -3897,7 +4252,7 @@
                         if (currentNode && (message.event.nodeid == currentNode._id) && (currentDeviceEvents != null)) {
                             // If this event has a nodeid and we are looking at this node, update the log in real time.
                             if ((message.event.action == p16filterevents.value) || (p16filterevents.value == "")) {
-                                if(currentDeviceEvents != null) {
+                                if (currentDeviceEvents != null) {
                                     currentDeviceEvents.unshift(message.event);
                                     var eventLimit = parseInt(p16limitdropdown.value);
                                     while (currentDeviceEvents.length > eventLimit) { currentDeviceEvents.pop(); } // Remove element(s) at the end
@@ -3909,7 +4264,7 @@
                         if (currentUser && (message.event.userid == currentUser._id)) {
                             // If this event has a userid and we are looking at this user, update the log in real time.
                             if ((message.event.action == p31filterevents.value) || (p31filterevents.value == "")) {
-                                if(currentUserEvents != null) {
+                                if (currentUserEvents != null) {
                                     currentUserEvents.unshift(message.event);
                                     var eventLimit = parseInt(p31limitdropdown.value);
                                     while (currentUserEvents.length > eventLimit) { currentUserEvents.pop(); } // Remove element(s) at the end
@@ -3920,7 +4275,7 @@
 
                         // Add this event to the main events log.
                         if ((message.event.action == p3filterevents.value) || (p3filterevents.value == "")) {
-                            if(events != null) {
+                            if (events != null) {
                                 events.unshift(message.event);
                                 var eventLimit = parseInt(p3limitdropdown.value);
                                 while (events.length > eventLimit) { events.pop(); } // Remove element(s) at the end
@@ -4746,11 +5101,11 @@
                 if (foundNode) { gotoDevice(foundNode, xviewmode); goBackStack.push(1); }
             } else if (args.gotodevicername != null) {
                 var foundNode = null;
-                if (nodes != null) { for (var i in nodes) { if (nodes[i].rname == args.gotodevicername) { foundNode =  nodes[i]._id; } } }
+                if (nodes != null) { for (var i in nodes) { if (nodes[i].rname == args.gotodevicername) { foundNode = nodes[i]._id; } } }
                 if (foundNode) { gotoDevice(foundNode, xviewmode); goBackStack.push(1); }
             } else if (args.gotodeviceip != null) {
                 var foundNode = null;
-                if (nodes != null) { for (var i in nodes) { if (nodes[i].ip == args.gotodeviceip) { foundNode =  nodes[i]._id; } } }
+                if (nodes != null) { for (var i in nodes) { if (nodes[i].ip == args.gotodeviceip) { foundNode = nodes[i]._id; } } }
                 if (foundNode) { gotoDevice(foundNode, xviewmode); goBackStack.push(1); }
             } else if (args.gotomesh != null) {
                 if (meshes['mesh/' + domain + '/' + args.gotomesh] == null) return; // This device group is not loaded yet
@@ -5925,7 +6280,7 @@
                 }
                 if (count > 8) {
                     setModalContent('xxAddAgent', "Connect All", format("Are you sure you want to connect to {0} devices?", count));
-                    var closeFunc = function(event,a) {
+                    var closeFunc = function (event, a) {
                         document.getElementById('xxAddAgentModal').removeEventListener('hide.bs.modal', closeFunc);
                         Q('autoConnectDesktopCheckbox').checked = false;
                     }
@@ -6375,7 +6730,7 @@
 
             // Add Linux/macOS binary installer option
             var binaryInstallAgentsOrder = [6, 5, 10005, 25, 26, 28, 30, 32, 36, 37, 40, 41, 45, 16, 29];
-            var binaryInstallAgents = { 6 : 'Linux x86-64', 5 : 'Linux x86-32', 10005 : 'Apple OSX Universal', 25 : 'Linux ARM-HF, Rasberry Pi', 26 : 'Linux ARM64-HF', 28: 'Linux MIPS24KC (OpenWRT)', 30 : 'FreeBSD x86-64', 32: 'Linux ARM 64 bit (glibc/2.24 NOKVM)', 36: 'OpenWRT x86-64', 37: 'OpenBSD x86-64', 40: 'Linux MIPSEL24KC (OpenWRT)', 41: 'ARMADA/CORTEX-A53/MUSL (OpenWRT)', 45: 'RISC-V 64bit', 16: 'Apple macOS x86-64', 29: 'Apple macOS ARM-64' };
+            var binaryInstallAgents = { 6: 'Linux x86-64', 5: 'Linux x86-32', 10005: 'Apple OSX Universal', 25: 'Linux ARM-HF, Rasberry Pi', 26: 'Linux ARM64-HF', 28: 'Linux MIPS24KC (OpenWRT)', 30: 'FreeBSD x86-64', 32: 'Linux ARM 64 bit (glibc/2.24 NOKVM)', 36: 'OpenWRT x86-64', 37: 'OpenBSD x86-64', 40: 'Linux MIPSEL24KC (OpenWRT)', 41: 'ARMADA/CORTEX-A53/MUSL (OpenWRT)', 45: 'RISC-V 64bit', 16: 'Apple macOS x86-64', 29: 'Apple macOS ARM-64' };
             for (var i in binaryInstallAgentsOrder) { moreoptions += '<option value="' + binaryInstallAgentsOrder[i] + '">' + binaryInstallAgents[binaryInstallAgentsOrder[i]] + '</option>' }
             x += '<div id="aginsSysTypeDiv">';
             x += addHtmlFormFloating("System Type", '<select id="aginsSysType" onchange="addAgentToMeshClick()"  class="form-select">' + moreoptions + '</select>');
@@ -6492,7 +6847,7 @@
                 if (typeof bodyContent == 'number') {
                     for (var i = 1; i < 24; i++) { QV('dialog' + i, i == bodyContent); } // Edit this line when more dialogs are added
                     xxdialogMode = i;
-                } else if (typeof bodyContent == 'string'){
+                } else if (typeof bodyContent == 'string') {
                     Q('dialog2').innerHTML = bodyContent;
                     for (var i = 1; i < 24; i++) { QV('dialog' + i, i == 2); } // Edit this line when more dialogs are added
                     xxdialogMode = 2;
@@ -6853,7 +7208,7 @@
                 setModalContent('xxAddAgent', "Edit Device Tags", x);
                 $('#dp10devicevalue').select2({
                     theme: 'bootstrap-5',
-                    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+                    width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
                     placeholder: "Tag1, Tag2, Tag3",
                     closeOnSelect: false,
                     allowClear: true,
@@ -6863,7 +7218,7 @@
                 showModal('xxAddAgentModal', 'idx_dlgOkButton', () => d2groupActionFunctionTagsExec());
             } else if (op == 108) {
                 // Device notification
-                var x = '<div style=margin-bottom:4px>'+ "Perform batch device notification" + '</div>';
+                var x = '<div style=margin-bottom:4px>' + "Perform batch device notification" + '</div>';
                 x += '<select id=d2deviceop class="form-select-sm me-2" style=width:100%;margin-bottom:4px><option value=2>' + "Toast Notification" + '</option><option value=1>' + "Message Box" + '</option><option value=3>' + "Alert Box" + '</option></select>';
                 x += '<input id=dp2notifyTitle maxlength=256 placeholder="' + "Title" + '" style=width:100%;box-sizing:border-box;margin-bottom:4px />';
                 x += '<textarea id=d2notifyMsg style=width:100%;height:140px;resize:none;overflow-y:scroll;box-sizing:border-box;margin-bottom:4px></textarea>';
@@ -8590,7 +8945,7 @@
 
                 // Active Users
                 if (node.users && node.users.length > 0) {
-                    var u = node.users.map(function(user) {
+                    var u = node.users.map(function (user) {
                         return addKeyLinkConditional(EscapeHtml(user), "Locked", (node.lusers && node.lusers.indexOf(user) >= 0));
                     }).join(', ');
                     x += addDeviceAttribute((node.users.length > 1 ? "Active Users" : "Active User"), u);
@@ -9437,7 +9792,7 @@
             var rangeStartTime = flatpickr('#d2timeRangeStartSelector', {
                 enableTime: true, minDate: new Date(), defaultDate: new Date(), minuteIncrement: 1,
                 plugins: [new confirmDatePlugin({})],
-                onChange: function(selectedDates, dateStr, instance) {
+                onChange: function (selectedDates, dateStr, instance) {
                     rangeEndTime.set('minDate', dateStr);
                     if (rangeEndTime.selectedDates[0] && rangeEndTime.selectedDates[0] < selectedDates[0]) {
                         rangeEndTime.clear();
@@ -10095,7 +10450,7 @@
                 setModalContent('xxAddAgent', "Edit Tags", x);
                 $('#dp10devicevalue').select2({
                     theme: 'bootstrap-5',
-                    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+                    width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
                     placeholder: showEditNodeValueDialog_modes3[mode],
                     closeOnSelect: false,
                     allowClear: true,
@@ -10119,7 +10474,7 @@
             if (mode == 3) {
                 var tt = $('#dp10devicevalue').select2('data');
                 for (var i in tt) { tags += tt[i]['text'].trim() + ', '; }
-                x[showEditNodeValueDialog_modes2[mode]] = decodeURIComponent(tags.slice(0,-2));
+                x[showEditNodeValueDialog_modes2[mode]] = decodeURIComponent(tags.slice(0, -2));
             } else {
                 x[showEditNodeValueDialog_modes2[mode]] = Q('dp10devicevalue').value;
             }
@@ -10234,7 +10589,7 @@
             var inputAllowed = ((features2 & 0x2000) == 0) && ((currentNode.agent == null) || (currentNode.agent.id != 14)) && ((rights == 0xFFFFFFFF) || (((rights & 8) != 0) && ((rights & 256) == 0) && ((rights & 4096) == 0)));
             var online = ((currentNode.conn & 1) != 0); // If Agent (1) connected, enable remote desktop
             QE('connectbutton1', online); QE('connectbutton1d', online); // Desktop Connect button and dropdown
-            QE('connectbutton1r', online || (currentNode.mtype == 3));  QE('connectbutton1rd', online || (currentNode.mtype == 3)); // Desktop RDP Connect button and dropdown
+            QE('connectbutton1r', online || (currentNode.mtype == 3)); QE('connectbutton1rd', online || (currentNode.mtype == 3)); // Desktop RDP Connect button and dropdown
             if (currentNode.rdpport && currentNode.rdpport != 3389) {
                 QH('desktopCustomUpperRight', '<a style="cursor:pointer;line-height:22px" onclick="cmaltportaction(1,event)">' + format("RDP Port {0}", (currentNode.rdpport ? currentNode.rdpport : 3389)) + '</a>');
             } else {
@@ -11797,7 +12152,7 @@
                 x += '</div>';
             }
             setModalContent('xxAddAgent', "Authentication", x);
-            var closeFunc = function(event,a) {
+            var closeFunc = function (event, a) {
                 document.getElementById('xxAddAgentModal').removeEventListener('hide.bs.modal', closeFunc);
                 connectTerminal();
             }
@@ -12431,7 +12786,7 @@
 
         function p13gotofolder() {
             xxdialogButtons = 3;
-            setModalContent('xxAddAgent', "Go To Folder", '<input type=text id=p13folderinput style=width:100% value="' + (isWindowsNode(currentNode) ? p13targetpath.replaceAll('/','\\') + '\\' : p13targetpath + '/') +'"placeholder="' + (isWindowsNode(currentNode) ? 'C:\\' : '/var/www') + '" />');
+            setModalContent('xxAddAgent', "Go To Folder", '<input type=text id=p13folderinput style=width:100% value="' + (isWindowsNode(currentNode) ? p13targetpath.replaceAll('/', '\\') + '\\' : p13targetpath + '/') + '"placeholder="' + (isWindowsNode(currentNode) ? 'C:\\' : '/var/www') + '" />');
             showModal('xxAddAgentModal', 'idx_dlgOkButton', p13gotofolderEx);
             focusTextBox('p13folderinput');
         }
@@ -13875,7 +14230,7 @@
                 meshserver.send({ action: 'uploadagentcore', nodeids: [consoleNode._id], type: 'tiny' });
             } else if (Q('d3coreMode').value == 8) {
                 // Restart MeshAgent service
-                meshserver.send({ action: 'msg', type: 'console', nodeid: consoleNode._id, value:'service restart' });
+                meshserver.send({ action: 'msg', type: 'console', nodeid: consoleNode._id, value: 'service restart' });
             } else if (Q('d3coreMode').value == 9) {
                 // Update mesh agent
                 meshserver.send({ action: 'updateAgents', nodeids: [consoleNode._id] });
@@ -14067,7 +14422,7 @@
             if (duoU2Fenabled == false) {
                 setModalContent('xxAddAgent', "Duo Authentication", "Confirm enabling of Duo 2FA login security. Once enabled you will be given the option to use Duo at login for added security. Click ok to go thru the steps to enable Duo." + '<p style="text-align:center;margin-top:10px"><img src="images/duo-2fa-250.png"></p>');
                 showModal('xxAddAgentModal', 'idx_dlgOkButton', function () {
-                    window.location.href = '/add-duo?rurl=' + encodeURIComponentEx(window.location.href) + ((urlargs.key)?('&key=' + urlargs.key):'');
+                    window.location.href = '/add-duo?rurl=' + encodeURIComponentEx(window.location.href) + ((urlargs.key) ? ('&key=' + urlargs.key) : '');
                 });
             } else {
                 setModalContent('xxAddAgent', "Duo Authentication", '<p><label><input id=duo2facheck type=checkbox onclick=account_manageAuthDuoConfirm() />' + ' ' + "Confirm disabling 2FA Duo login security." + '</label></p>' + '<p style="text-align: center"><img src="images/duo-2fa-250-disable.png"></p>');
@@ -16430,7 +16785,7 @@
                 if (checkboxes[i].checked) { renamefile = checkboxes[i].value; }
             }
             setModalContent('xxAddAgent', "Rename", '<input type=text id=p5renameinput class="form-control" maxlength=64 onkeyup=p5fileNameCheck(event) value="' + renamefile + '" />');
-            showModal('xxAddAgentModal', 'idx_dlgOkButton', () => { meshserver.send({ action: 'fileoperation', fileop: 'rename', path: filetreelocation, oldname: renamefile, newname: Q('p5renameinput').value}); });
+            showModal('xxAddAgentModal', 'idx_dlgOkButton', () => { meshserver.send({ action: 'fileoperation', fileop: 'rename', path: filetreelocation, oldname: renamefile, newname: Q('p5renameinput').value }); });
             focusTextBox('p5renameinput'); p5fileNameCheck();
         }
         function p5fileNameCheck(e) { var x = isFilenameValid(Q('p5renameinput').value); QE('idx_dlgOkButton', x); if ((x == true) && (e && e.keyCode == 13)) { dialogclose(1); } }
@@ -16837,7 +17192,7 @@
                     if (event.nodeid) {
                         var node = getNodeFromId(event.nodeid);
                         if (node != null) {
-                            switch(node.icon){
+                            switch (node.icon) {
                                 case 1:
                                     icon = 'fa-computer';
                                     break;
@@ -18840,7 +19195,7 @@
             meshserver.send({ action: 'removemeshuser', meshid: meshid, userid: currentUser._id });
         }
 
-        
+
         //
         // UserDropDown Menu 
         //
@@ -18853,29 +19208,29 @@
             var dropdownMenu = Q('userDropdownMenu');
             var uiSettingsButton = document.querySelector('.userDropdownUISettings');
             var uiSubmenu = Q('uiSubmenu');
-            
+
             if (!dropdownButton || !dropdownMenu) return;
-            
+
             QS('uiSubmenu').display = 'none';
             QS('uiSubmenu').opacity = '0';
             QS('uiSubmenu').transform = 'translateX(12px)';
             dropdownMenu.classList.remove('show');
 
-                dropdownButton.onclick = function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    userDropdownOpen = !userDropdownOpen;
-                    dropdownMenu.classList.toggle('show');
-                    if (!userDropdownOpen) {
-                        QS('uiSubmenu').display = 'none';
-                        QS('uiSubmenu').opacity = '0';
-                        QS('uiSubmenu').transform = 'translateX(12px)';
-                        uiSubmenuOpen = false;
-                        resetChevronArrow();
-                    }
-                };
+            dropdownButton.onclick = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                userDropdownOpen = !userDropdownOpen;
+                dropdownMenu.classList.toggle('show');
+                if (!userDropdownOpen) {
+                    QS('uiSubmenu').display = 'none';
+                    QS('uiSubmenu').opacity = '0';
+                    QS('uiSubmenu').transform = 'translateX(12px)';
+                    uiSubmenuOpen = false;
+                    resetChevronArrow();
+                }
+            };
 
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 var uiSubmenu = Q('uiSubmenu');
                 if (!dropdownMenu.contains(e.target) && !dropdownButton.contains(e.target) && !uiSubmenu.contains(e.target)) {
                     dropdownMenu.classList.remove('show');
@@ -18891,16 +19246,16 @@
 
         function toggleUISubmenu() {
             uiSubmenuOpen = !uiSubmenuOpen;
-            
+
             var uiSubmenu = Q('uiSubmenu');
             var isDesktop = window.innerWidth > 769;
             var reduceMotion = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-            
+
             if (uiSubmenuOpen) {
                 QS('uiSubmenu').display = 'block';
-                
+
                 if (isDesktop && (reduceMotion == false)) {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         QS('uiSubmenu').opacity = '1';
                         QS('uiSubmenu').transform = 'translateX(0)';
                     }, 10);
@@ -18912,7 +19267,7 @@
                 if (isDesktop && (reduceMotion == false)) {
                     QS('uiSubmenu').opacity = '0';
                     QS('uiSubmenu').transform = 'translateX(12px)';
-                    setTimeout(function() {
+                    setTimeout(function () {
                         QS('uiSubmenu').display = 'none';
                     }, 300);
                 } else {
@@ -18921,7 +19276,7 @@
                     QS('uiSubmenu').transform = 'translateX(12px)';
                 }
             }
-            
+
             var chevronIcon = document.querySelector('.userDropdownUISettings .fa-chevron-right');
             if (chevronIcon) {
                 chevronIcon.style.transform = uiSubmenuOpen ? 'rotate(90deg)' : '';
@@ -18937,7 +19292,7 @@
             uiSubmenuOpen = false;
             resetChevronArrow();
 
-            switch(action) {
+            switch (action) {
                 case 'devices': goForward('devices'); break;
                 case 'events': goForward('events'); break;
                 case 'users': goForward('users'); break;
@@ -18951,7 +19306,7 @@
                 case 'toggle-night': toggleNightMode(); break;
                 case 'notes': showNotes(false); break;
                 case 'account': go(2); break;
-                case 'logout': 
+                case 'logout':
                     if (logoutControls && logoutControls.logoutUrl) {
                         window.location.href = logoutControls.logoutUrl;
                     }
@@ -18968,11 +19323,11 @@
             var userDropdown = Q('userDropdown');
             var dropdownName = Q('userDropdownName');
             var dropdownImage = Q('userDropdownImage');
-            
+
             if (logoutControls && logoutControls.name) {
                 QS('userDropdown').display = 'block';
                 dropdownName.textContent = logoutControls.name;
-                
+
                 if (userinfo && userinfo.flags && (userinfo.flags & 1)) {
                     var rnd = userinfo.accountImageRnd || Math.floor(Math.random() * 9999999999);
                     dropdownImage.src = 'userimage.ashx?rnd=' + rnd;
@@ -18999,7 +19354,7 @@
                 }
             }
         }
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             initializeUserDropdown();
             updateUserDropdownVisibility();
             updateNightModeIcon();
@@ -19197,7 +19552,7 @@
             if (rec.meshname) { x += addHtmlValue4("Device Group", EscapeHtml(rec.meshname)); }
             if (rec.size) { x += addHtmlValue4("Size", format("{0} bytes", rec.size)); }
             if (rec.startTime) { x += addHtmlValue4("Start Time", printTime(new Date(rec.startTime))); }
-            if (rec.startTime && rec.lengthTime) { x += addHtmlValue4("End Time", printTime(new Date(rec.startTime + (rec.lengthTime * 1000)))); } 
+            if (rec.startTime && rec.lengthTime) { x += addHtmlValue4("End Time", printTime(new Date(rec.startTime + (rec.lengthTime * 1000)))); }
             if (rec.lengthTime) { x += addHtmlValue4("Duration", pad2(Math.floor(rec.lengthTime / 3600)) + ':' + pad2(Math.floor((rec.lengthTime % 3600) / 60)) + ':' + pad2(Math.floor(rec.lengthTime % 60))); }
             if (rec.multiplex == true) { x += addHtmlValue4("Multiplexor", "Enabled"); }
             if (rec.userids) { for (var i in rec.userids) { x += addHtmlValue4("User", rec.userids[i].split('/')[2]); } }
@@ -19386,7 +19741,7 @@
             lastWeek.setDate(lastWeek.getDate() - 7);
             var rangeStartTime = flatpickr('#d2timeRangeStartSelector', {
                 enableTime: true, maxDate: new Date(), defaultDate: lastWeek, minuteIncrement: 1, plugins: [new confirmDatePlugin({})],
-                onChange: function(selectedDates, dateStr, instance) {
+                onChange: function (selectedDates, dateStr, instance) {
                     rangeEndTime.set('minDate', dateStr);
                     if (rangeEndTime.selectedDates[0] && rangeEndTime.selectedDates[0] < selectedDates[0]) {
                         rangeEndTime.clear();
@@ -19706,7 +20061,7 @@
 
         // Close notification box when clicking outside
         function setupNotificationClickOutside() {
-            document.addEventListener('click', function(event) {
+            document.addEventListener('click', function (event) {
                 var notificationBox = Q('notifiyBox');
                 var notificationIcon = Q('notificationCount');
                 if (notificationBox && QS('notifiyBox')['display'] !== 'none') {
@@ -19718,7 +20073,7 @@
         }
         setupNotificationClickOutside();
 
-        
+
         // Refresh the notification box
         function drawNotifications() {
             var notifySettings = getstore('notifications', 0);
